@@ -40,7 +40,8 @@ public class JumpToTheNewWindow {
             }
         }
         System.out.println("after switch : " + driver.getCurrentUrl());
-        driver.close();
+       // driver.close();
+        driver.quit();
 
 
     }
