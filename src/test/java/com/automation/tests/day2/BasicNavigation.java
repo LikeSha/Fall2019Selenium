@@ -61,6 +61,7 @@ public class BasicNavigation {
         // driver.navigate().to() = driver.get();
         // must be at the end
         driver.close();// to close browser
+
         //browser cannot close itself
 
 
