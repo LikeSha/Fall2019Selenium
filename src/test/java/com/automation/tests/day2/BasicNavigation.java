@@ -41,9 +41,14 @@ public class BasicNavigation {
         }
         // come back to google
         driver.navigate().back();
+        Thread.sleep(3000);
         // checking if page title is equals to Google
         //.getTitle()--returns page title
         verifyEquals(driver.getTitle(),"Google");
+
+        // move forward in the browser history
+        System.out.println("Title : " + driver.getTitle());
+        // driver.getTitle() ---returns page title of the page that is currently opened
 
 
         // must be at the end
@@ -60,7 +65,7 @@ public class BasicNavigation {
      * @param arg1
      * @param arg2
      */
-    public static void verifyEquals(String arg1,String arg2){
+    public static void verifyEquals(String arg1,String arg2){  // static methods accepts only static members
         if(arg1.equals(arg2)){
             System.out.println("test passed!!");
         }else{
