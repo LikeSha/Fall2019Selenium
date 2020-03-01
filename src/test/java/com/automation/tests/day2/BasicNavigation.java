@@ -15,12 +15,14 @@ public class BasicNavigation {
         // In selenium, everything starts from WebDriver interface
         // ChromeDriver extends RemoteWebDriver--> implements WebDriver
         driver.get("http://google.com");// to open a website
+        driver.manage().window().maximize();
+      //  driver.manage().window().fullscreen();
 
         Thread.sleep(3000);// for demo, wait 3 seconds
         // method that return page title
         // you can also see it as tab name, in the browser
         String title = driver.getTitle(); // returns <title> Some title</title> text
-        String expectedTitle = "Google";
+        String expectedTitle = "Google"; // we provide it
 
         System.out.println("Title is ...." + title);
 
@@ -30,10 +32,42 @@ public class BasicNavigation {
             System.out.println("test failed!!");
         }
 
+        // go to another website within the same window
+        driver.navigate().to("http://amazon.com");
+        if(driver.getTitle().toLowerCase().contains("amazon")){
+            System.out.println("test passed!!");
+        }else{
+            System.out.println("test failed!!!");
+        }
+        // come back to google
+        driver.navigate().back();
+        // checking if page title is equals to Google
+        //.getTitle()--returns page title
+        verifyEquals(driver.getTitle(),"Google");
+
+
+        // must be at the end
         driver.close();// to close browser
         //browser cannot close itself
 
 
 
     }
+
+    /**
+     * check if two String are same. If same then print test passed!! message
+     * otherwise , print test failed!!! message
+     * @param arg1
+     * @param arg2
+     */
+    public static void verifyEquals(String arg1,String arg2){
+        if(arg1.equals(arg2)){
+            System.out.println("test passed!!");
+        }else{
+            System.out.println("tese failed!!!");
+        }
+    }
+
+
+
 }
