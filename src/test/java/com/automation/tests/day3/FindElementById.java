@@ -44,15 +44,36 @@ public class FindElementById {
         //and fix itself
         //don't put sapce
         WebElement logout = driver.findElement(By.linkText("Logout"));
-        logout.click();
 
         String href = logout.getAttribute("href"); // orange color is attribute in "inspect"
+        String className = logout.getAttribute("class");
+
         System.out.println(href);
+        System.out.println(className);
+
+        logout.click();
+        Thread.sleep(2000);
+
+        //lets enter invalid credentials
+
+        driver.findElement(By.name("username")).sendKeys("wrong");
+        driver.findElement(By.name("password")).sendKeys("wrong");
+        driver.findElement(By.id("wooden_spoon")).click();
+
+
+
+        Thread.sleep(2000);
+
+        WebElement errorMessage = driver.findElement(By.id("flash-messages"));
+
+        System.out.println(errorMessage.getText());
 
         Thread.sleep(2000);
 
 
         driver.quit();
+
+
 
     }
 
