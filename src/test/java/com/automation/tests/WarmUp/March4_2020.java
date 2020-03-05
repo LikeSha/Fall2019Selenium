@@ -10,10 +10,10 @@ public class March4_2020 {
 
     static WebDriver driver;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ebayTest();
         amazonTest();
-//        wikiTest();
+        wikiTest();
     }
 
     /**
@@ -38,11 +38,14 @@ public class March4_2020 {
      * click on search button
      * verify title contains search term
      */
-    public static void amazonTest(){
+    public static void amazonTest() throws Exception {
         driver = DriverFactory.createDriver("chrome");
         driver.get("http://amazon.com");
         //enter text and click ENTER
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("java book", Keys.ENTER);
+
+        Thread.sleep(4000);
+
         String title = driver.getTitle();
         if(title.contains("java book")){
             System.out.println("TEST PASSED");
@@ -59,14 +62,35 @@ public class March4_2020 {
      * click on search result `Selenium (software)`
      * verify url ends with `Selenium_(software)`
      */
-    public static void wikiTest(){
+    public static void wikiTest() throws Exception{
         driver = DriverFactory.createDriver("chrome");
+        //Go to wikipedia.org
         driver.get("https://en.wikipedia.org/wiki/Main_Page");
-        driver.findElement(By.id("searchInput")).sendKeys("Selenium(software)",Keys.ENTER);
 
+      //  enter search term `selenium webdriver` & click on search button
+        driver.findElement(By.id("searchInput")).sendKeys("selenium webdriver", Keys.ENTER);
 
+        Thread.sleep(3000);
 
+        //click on search result `Selenium (software)`
+        driver.findElement(By.partialLinkText("Selenium (software)")).click();
+
+        Thread.sleep(2000);
+
+        String link = driver.getCurrentUrl(); // to get link as a String
+        // verify url ends with `selenium webdriver`
+        if(link.endsWith("Selenium_(software)")){
+            System.out.println("TEST PASSED");
+        }else {
+            System.out.println("TEST FAILED");
+        }
 
         driver.quit();
     }
-}
+
+
+
+
+
+    }
+
