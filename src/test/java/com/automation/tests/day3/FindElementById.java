@@ -42,7 +42,7 @@ public class FindElementById {
         //partialLinkText---contains()--complete match doesn't required
         //linkText requires exact match ,parcialLinkText allows you have spaces when testing
         //and fix itself
-        //don't put sapce
+        //don't put space
         WebElement logout = driver.findElement(By.linkText("Logout"));
 
         String href = logout.getAttribute("href"); // orange color is attribute in "inspect"
