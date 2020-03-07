@@ -12,7 +12,8 @@ import java.util.List;
 public class CheckBoxesTest {
 
     public static void main(String[] args) {
-
+        // click " shift " twice , then input " break " , then select " remove all break points "
+        // the all break point after you debug will removed immediately in the same time
         WebDriverManager.chromedriver().version("79").setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/checkboxes");
@@ -35,6 +36,7 @@ public class CheckBoxesTest {
         WebElement checkbox1 =checkBoxes.get(0);// to get 1st checkbox
         checkbox1.click();
 
+        BrowserUtils.wait(2);
         if(checkbox1.isSelected()){
             System.out.println("TEST PASSED");
             System.out.println("checkbox #1 is selected");
