@@ -22,8 +22,13 @@ public class RadioButtonsTest {
 
         //if visible and eligible to click  visible and eligible are two different things
         if(blackButton.isDisplayed() && blackButton.isEnabled()){
+            System.out.println("CLICKED ON BLACK BUTTON");
             blackButton.click();
+        }else{
+            System.out.println("FAILED TO CLICK ON BLACK BUTTON");
         }
+
+        BrowserUtils.wait(3);
 
 
         //how do we verify that button clicked
@@ -33,6 +38,8 @@ public class RadioButtonsTest {
         }else{
             System.out.println("TEST FAILED");
         }
+
+        driver.quit();
 
     }
 }
