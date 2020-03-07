@@ -9,7 +9,7 @@ public class BasicNavigation {
 
         // to start selenium script we need :
         // setup webdriver(browser driver) and create webdriver object
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().version("79").setup();
         ChromeDriver driver = new ChromeDriver();
 
         // In selenium, everything starts from WebDriver interface
@@ -78,10 +78,9 @@ public class BasicNavigation {
         if(arg1.equals(arg2)){
             System.out.println("test passed!!");
         }else{
-            System.out.println("tese failed!!!");
+            System.out.println("test failed!!!");
         }
     }
-
 
 
 }

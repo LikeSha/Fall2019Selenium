@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class FindeElementsTest {
+public class FindElementsTest { // this topic is interview question StaleElementReferenceException
 
     public static void main(String[] args) throws Exception {
 
@@ -36,6 +36,7 @@ public class FindeElementsTest {
 
             driver.navigate().back();
             Thread.sleep(2000);
+            links = driver.findElements(By.tagName("a"));
 
         }
 
