@@ -15,7 +15,11 @@ public class SelectByTextMultipleOptions {
         BrowserUtils.wait(3);
         Select languagesSelect = new Select(driver.findElement(By.name("Languages")));
         boolean isMultiple = languagesSelect.isMultiple();
-        System.out.println("isMultiple = " + isMultiple);
+        System.out.println("isMultiple = " + isMultiple);//if its true ,you can select more than one option
+
+        languagesSelect.selectByVisibleText("Java");
+        languagesSelect.selectByVisibleText("JavaScript");
+        languagesSelect.selectByVisibleText("Python");
 
 
 
