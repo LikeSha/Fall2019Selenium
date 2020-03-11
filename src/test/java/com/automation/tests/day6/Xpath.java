@@ -14,7 +14,7 @@ public class Xpath {
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
         BrowserUtils.wait(3);
         //value can be inside '' or ""
-        //if you don't know the tag name ,or want to tskip tag name, use *
+        //if you don't know the tag name ,or want to skip tag name, use *
         //for example //*[@onclick='button()'] \| * means any tag name
         WebElement btn1 = driver.findElement(By.xpath("//button[@onclick='button1()']"));
         btn1.click();
@@ -26,6 +26,20 @@ public class Xpath {
         WebElement btn2 = driver.findElement(By.xpath("//button[text()='Button 2']"));
         btn2.click();
         System.out.println(result.getText());
+
+        WebElement btn3 = driver.findElement(By.xpath("//button[starts-with(@id,'button_')]"));
+        btn3.click();
+        System.out.println(result.getText());
+
+        WebElement btn4 = driver.findElement(By.xpath("//button[contains(@id,'_button')][1]"));
+        btn4.click();
+        System.out.println(result.getText());
+
+        WebElement btn5 = driver.findElement(By.xpath("//button[contains(text(),'5')]"));
+        btn5.click();
+        System.out.println(result.getText());
+
+        // INDEXES START FROM 1 IN XPATH!!!!!!!!!
 
 
 

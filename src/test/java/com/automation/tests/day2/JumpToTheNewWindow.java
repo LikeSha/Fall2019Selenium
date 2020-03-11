@@ -24,7 +24,7 @@ public class JumpToTheNewWindow {
 
         System.out.println(windowHandle);
         // getWindowHandles() --returns id's of all currently opened windows
-        //Set---doesn't allow duplicates
+        //Set---doesn't allow duplicates  because each window has one ID, and its unique id.
         Set<String> windowHandles = driver.getWindowHandles();
 
         System.out.println(windowHandles);

@@ -13,7 +13,7 @@ public class GoogleSearchTest {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.get("http://googe.com");
+        driver.get("http://google.com");
         Thread.sleep(2000);
         //By.name("q")---> name="q"
         //name--its one of the selenium locators
@@ -29,7 +29,7 @@ public class GoogleSearchTest {
         Thread.sleep(4000);
         //if see<a>element, it calls link
         //visible text of this link, can be used by selenium to find this element
-        WebElement news = driver.findElement(By.linkText("news"));
+        WebElement news = driver.findElement(By.linkText("News"));
         news.click();// to click on the element
         Thread.sleep(4000);
         driver.quit();
