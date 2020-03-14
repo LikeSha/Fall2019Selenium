@@ -7,8 +7,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class SearchTests {
 
     private WebDriver driver;
 
+    @Test
     public void googleSearchTest(){
         driver.get("http://google.com");
         driver.findElement(By.name("q")).sendKeys("java", Keys.ENTER);
@@ -23,8 +26,17 @@ public class SearchTests {
         //since very search item has a tag name <h3>
         //it's the easiest way to collect all of them
         List<WebElement> searchItems = driver.findElements(By.tagName("h3"));
-        for(WebElement searItem : searchItems){
-            System.out.println(searItem.getText());
+        for(WebElement searchItem : searchItems){
+            String var = searchItem.getText();
+            //if there is a text --print it
+            if(!var.isEmpty()){
+                System.out.println(var);
+                //verify that every search result contains java
+                Assert.assertTrue(var.toLowerCase().contains("java"));
+                //test without assertion is useless - what makes test => test
+                //without assertion you can not understand test has passed or failed
+            }
+            System.out.println(searchItem.getText());
         }
     }
 
