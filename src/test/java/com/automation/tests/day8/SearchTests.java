@@ -43,7 +43,15 @@ public class SearchTests {
 
         }
     }
-                @Test(description = "Search for Java book on amazon")
+
+    /**
+     * Given user is on the amazon.com page
+     * when user enters "Java" as a search item
+     * then user clicks on the search button
+     * and user clicks on the first search item
+     * and user verifies that title of the search item contains "Java"
+     */
+    @Test(description = "Search for Java book on amazon")
                 public void amazonSearchTest(){
                     driver.get("http://amazon.com");
 
