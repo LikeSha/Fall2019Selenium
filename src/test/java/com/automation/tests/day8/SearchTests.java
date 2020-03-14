@@ -92,7 +92,7 @@ public class SearchTests {
     @BeforeMethod
     public void setup(){
         //setup webdriver
-        WebDriverManager.chromedriver().version("97").setup();
+        WebDriverManager.chromedriver().version("79").setup();
         driver = new ChromeDriver();
     }
 
