@@ -32,13 +32,24 @@ public class SearchTests {
             if(!var.isEmpty()){
                 System.out.println(var);
                 //verify that every search result contains java
+                //is some of the search results
+                //doesn't contain java word, it will fail the test
                 Assert.assertTrue(var.toLowerCase().contains("java"));
                 //test without assertion is useless - what makes test => test
                 //without assertion you can not understand test has passed or failed
+                System.out.println(var.toLowerCase());
+                System.out.println();
             }
-            System.out.println(searchItem.getText());
+
         }
     }
+                @Test(description = "Search for Java book on amazon")
+                public void amazonSearchTest(){
+                    driver.get("http://amazon.com");
+
+                }
+
+
 
     @BeforeMethod
     public void setup(){
