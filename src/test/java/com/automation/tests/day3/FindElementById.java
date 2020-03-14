@@ -40,10 +40,10 @@ public class FindElementById {
         //every element with <a> tag is a link
         //if you have couple spaces in the text, just use partialLinkText instead of linkText
         //partialLinkText---contains()--complete match doesn't required
-        //linkText requires exact match ,parcialLinkText allows you have spaces when testing
+        //linkText requires exact match ,partialLinkText allows you have spaces when testing
         //and fix itself
         //don't put space
-        WebElement logout = driver.findElement(By.linkText("Logout"));
+        WebElement logout = driver.findElement(By.partialLinkText("Logout"));
 
         String href = logout.getAttribute("href"); // orange color is attribute in "inspect"
         String className = logout.getAttribute("class");

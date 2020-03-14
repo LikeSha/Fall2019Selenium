@@ -43,8 +43,18 @@ public class FindElementsPractice {
         WebElement signUp =driver.findElement(By.name("wooden_spoon"));
         //when you see type="submit", you can use submit() instead of click()
         //it make sense to use when click() method doesn't work
-        signUp.submit();
+        signUp.click();
         Thread.sleep(2000);
+
+        //now we need to verify our test is a good test or not
+        // so after click(); the page showing "Thank you for signing up.
+        // Click the button below to return to the home page"
+        // we take this sentence as a webelement and test it .
+        //after typing [class="subheader"] we found className is unique ,so we can
+        //use className this time as our locator By.className("subheader")
+        // after typing h3 we found tag h3 also unique ( 1 of 1 in the search box)
+        //so we can also h3 as tagName to find the element By.tagName("h3")
+        // also can use By.name("signup_message") all above three are unique in this element
 
         String expected = "Thank you for signing up. Click the button below to return to the home page.";
 
