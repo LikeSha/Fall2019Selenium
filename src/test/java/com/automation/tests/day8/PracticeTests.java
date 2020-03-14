@@ -5,12 +5,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class PracticeTests {
 
@@ -48,7 +51,55 @@ public class PracticeTests {
            //3 parameters : (expected ,actual ,message in case of error)
 
            Assert.assertEquals(actual,expected,"Sub-header message is not matching!");
+
+
+
        }
+
+    /**
+     * Given user is on the practice landing page
+     * when user navigates to "Forgot password" age
+     * then user enters his email
+     * and clicks "Retrieve password" button
+     * Then user verifies that message " Your e-mail's been sent!" is displayed
+     */
+    @Test
+       public void forgotPasswordTest(){
+           driver.findElement(By.linkText("Forgot Password")).click();
+           BrowserUtils.wait(5);
+           driver.findElement(By.name("email")).sendKeys("tradersalike88@yahoo.com", Keys.ENTER);
+
+
+           BrowserUtils.wait(5);
+
+        String expected = "Your e-mail's been sent!";
+        String actual = driver.findElement(By.name("confirmation_message")).getText();
+        Assert.assertEquals(actual,expected,"Confirmation message is not valid");
+
+
+       }
+
+    /**
+     * TASK for 5 minutes
+     * Given user is on the practice landing page
+     * When user navigates to "Checkboxes" page
+     * And clicks on checkbox #1
+     * Then user verifies that checkbox #1 is selected
+     */
+
+    @Test
+    public void CheckboxTest1(){
+           driver.findElement(By.linkText("Checkboxes")).click();
+           BrowserUtils.wait(5);
+        List<WebElement> checkboxes = driver.findElements(By.tagName("input"));
+        BrowserUtils.wait(5);
+
+        checkboxes.get(0).click(); // to click on 1st checkbox
+
+        Assert.assertTrue(checkboxes.get(0).isSelected(),"Checkbox #1 is not selected!");
+
+
+    }
 
     @BeforeTest
       public void setup(){
