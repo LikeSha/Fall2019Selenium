@@ -4,6 +4,18 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class BasicTestNGTests {
+    //runs only once before @BeforeClass and @BeforeMethod
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("BEFORE TEST");
+    }
+
+    //Runs only once in the class after @AfterClass and @AfterMethod
+    @AfterTest
+    public void afterTest(){
+        System.out.println("AFTER TEST");
+    }
+
     // BeforeClass runs only once in the class before @Beforemethod and before any test
     //regardless on number of tests, it runs only once
     @BeforeClass
