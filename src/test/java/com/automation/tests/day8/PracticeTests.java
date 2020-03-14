@@ -31,16 +31,16 @@ public class PracticeTests {
     private WebDriver driver;
 
     /**
-     * We put @Test annotation to make methods execcutable as tests
+     * We put @Test annotation to make methods executable as tests
      */
        @Test
        public void loginTest(){
            driver.findElement(By.linkText("Form Authentication")).click();
-           BrowserUtils.wait(3);
+           BrowserUtils.wait(5);
            driver.findElement(By.name("username")).sendKeys("tomsmith");
            driver.findElement(By.name("password")).sendKeys("SuperSecretPassword", Keys.ENTER);
 
-           BrowserUtils.wait(3);
+           BrowserUtils.wait(5);
 
            String expected  = "Welcome to the Secure Area. When you are done click logout below.";
            String actual = driver.findElement(By.className("subheader")).getText();
@@ -59,13 +59,14 @@ public class PracticeTests {
         //to ignore "Your connection is not private issue"
        // chromeOptions.setAcceptInsecureCerts(true);
         //provide chromeOptions object into chromedriver constructor
+        //driver = new ChromeDriver(chromeOptions);
           driver = new ChromeDriver();
           driver.get("http://practice.cybertekschool.com/");
           driver.manage().window().maximize();
       }
 
       @AfterTest
-      public void teardown(){
+      public void tearDown(){
          driver.quit();
       }
 
