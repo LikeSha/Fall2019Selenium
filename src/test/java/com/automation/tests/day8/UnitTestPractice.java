@@ -1,5 +1,7 @@
 package com.automation.tests.day8;
 
+import org.testng.annotations.Test;
+
 public class UnitTestPractice {
 
     public static void main(String[] args) {
@@ -14,6 +16,14 @@ public class UnitTestPractice {
         verifyEquals(expected, actual);
 
     }
+    //annotation
+     @Test
+    public void test(){ // THIS IS UNIT TEST
+
+    }
+
+
+
 
     public static boolean verifyEquals(String expected, String actual) {
         if (expected.equals(actual)) {
