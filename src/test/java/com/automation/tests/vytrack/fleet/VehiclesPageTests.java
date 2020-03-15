@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -34,6 +35,8 @@ public class VehiclesPageTests {
     private By passwordBy = By.id("prependedInput2");
     private By fleetBy = By.xpath("//span[@class='title title-level-1' and contains(text(),'Fleet')]");
     private By subtitleBy = By.className("oro-subtitle");
+    private By pageNumberBy = By.cssSelector("input[type='number']");
+
     private WebDriver driver;
     @Test
     public void verifyPageSubTitle(){
@@ -53,9 +56,42 @@ public class VehiclesPageTests {
         //click on Vehicles
         driver.findElement(By.linkText("Vehicles")).click();
         BrowserUtils.wait(5);
+
+
+//###############################################################################
+       // find subtitle element
         WebElement subTitleElement = driver.findElement(subtitleBy);
         System.out.println(subTitleElement.getText());
+
+        String expected = "All Cars";
+        String actual = subTitleElement.getText();
+
+        Assert.assertEquals(actual,expected);
+
     }
+
+    /**
+     * one more task :
+     *           Given user is on the vytrack anding page
+     *           When user logs on as a store manager
+     *           Then user navigates to Fleet-->Vehicles
+     *           And user verifies that page number is equals to "1"
+     */
+
+      @Test
+      public void verifyPageNumber(){
+
+           String expected = "1";
+           String actual = driver.findElement(pageNumberBy).getAttribute("value");
+
+
+          Assert.assertEquals(actual, expected);
+
+
+
+
+      }
+
     @BeforeMethod
     public void setup() {
         WebDriverManager.chromedriver().version("79").setup();
