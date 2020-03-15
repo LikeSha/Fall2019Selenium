@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -52,6 +53,8 @@ public class loginPageTests {
         String expected = "Dashboard";
         String actual = driver.getTitle();
 
+        assertEquals(actual,expected,"Page title is not correct!");
+
 
     }
 
@@ -66,6 +69,7 @@ public class loginPageTests {
         driver.manage().window().maximize();
     }
 
+    @AfterMethod
     public void teardown(){
         //if webdriver object alive
         if(driver !=null){
