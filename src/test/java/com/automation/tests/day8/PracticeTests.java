@@ -90,6 +90,9 @@ public class PracticeTests {
     @Test
     public void CheckboxTest1(){
            driver.findElement(By.linkText("Checkboxes")).click();
+           //locator for specific checkbox, xpath://input[1], cssSelector: input:nth-of-type(1)
+
+        // collect all checkboxes
            BrowserUtils.wait(5);
         List<WebElement> checkboxes = driver.findElements(By.tagName("input"));
         BrowserUtils.wait(5);
@@ -97,6 +100,8 @@ public class PracticeTests {
         checkboxes.get(0).click(); // to click on 1st checkbox
 
         Assert.assertTrue(checkboxes.get(0).isSelected(),"Checkbox #1 is not selected!");
+
+        BrowserUtils.wait(4);
 
 
     }
