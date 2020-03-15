@@ -26,8 +26,7 @@ public class loginPageTests {
     private String username = "storemanager85";
     private String password = "UserUser123";
     private By usernameBy = By.id("prependedInput");
-    private By passwordBy = By.id("prependedInput2");
-    //private By usernameBy =By.id("prependedInput"); //By is a class--> when we find an element by using By.... methods
+    private By passwordBy =By.id("prependedInput2"); //By is a class--> when we find an element by using By.... methods
     ////it returns By data type and we stored it in to By as above statement.
     private By warningMessageBy = By.cssSelector("[class='alert alert-error'] > div");
 
@@ -54,6 +53,14 @@ public class loginPageTests {
         String actual = driver.getTitle();
 
         assertEquals(actual,expected,"Page title is not correct!");
+
+        /*
+           html5 warning message attribute
+           this warning message can not be catched with locator
+           it some kind of attribute coming from html
+          you can not catch it, there is a method getAttribute
+          you can just read it
+         */
 
 
     }
