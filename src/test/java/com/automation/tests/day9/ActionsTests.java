@@ -25,6 +25,7 @@ public class ActionsTests {
     @Test
     public void hoverOnImage(){
        driver.get("http://practice.cybertekschool.com/hovers");
+       driver.manage().window().maximize();
         BrowserUtils.wait(3);
 
         WebElement img1 = driver.findElement(By.xpath("(//img)[1]"));
@@ -44,11 +45,60 @@ public class ActionsTests {
         //verify that "name: user1" is displayed
         //hover over image to make text visible
         actions.moveToElement(img1).perform();
-        WebElement imgText1 = driver.findElement(By.xpath("//h5[text()=‘name: user1’]"));
+        WebElement imgText1 = driver.findElement(By.xpath("//h5[text()='name: user1']"));
         //verify that webelement that contains the text is visible
         Assert.assertTrue(imgText1.isDisplayed());
 
+        BrowserUtils.wait(2);
+
+        //move to the second image
+
+        actions.moveToElement(img2).perform();
+        WebElement imgText2 = driver.findElement(By.xpath("//h5[text()='name: user2']"));
+        Assert.assertTrue(imgText2.isDisplayed());
+
     }
+
+    @Test
+    public void jqueryMenuTest(){
+        //Task until 8:20
+        driver.get("http://practice.cybertekschool.com/jqueryui/menu");
+        //hover on "enabled"
+        //hover on "downloads"
+        //click on PDF
+        driver.manage().window().maximize();
+        BrowserUtils.wait(3);
+
+        WebElement enabled = driver.findElement(By.id("ui-id-3"));
+        WebElement downLoad = driver.findElement(By.id("ui-id-4"));
+        WebElement pdf = driver.findElement(By.id("ui-id-5"));
+
+        actions.moveToElement(enabled).
+                pause(1000).
+                moveToElement(downLoad).
+                pause(1000).
+                click(pdf).build().perform();
+
+
+
+
+
+    }
+
+     @Test
+     public void dragAndDropTest(){
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        BrowserUtils.wait(3);
+
+        WebElement earth = driver.findElement(By.id("droptarget"));
+        WebElement moon = driver.findElement(By.id("draggable"));
+
+        actions.dragAndDrop(moon,earth).perform();
+
+        String expected = "You did great";
+        String actual = earth.getText();
+     }
+
 
     @AfterMethod
     public void tearDown(){
