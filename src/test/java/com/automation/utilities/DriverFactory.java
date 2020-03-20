@@ -24,3 +24,11 @@ public class DriverFactory {
         }
     }
 }
+          // public static WebDriver getDriver(String browser){
+ //              browser = browser.toLowerCase();
+ //              switch(browser){
+//               case "chrome":
+//                    WebDriverManager.chromedriver().setup();
+ //                   return new ChromeDriver();
+//               }
+//               return null;
