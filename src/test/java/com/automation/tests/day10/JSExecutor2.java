@@ -1,5 +1,6 @@
 package com.automation.tests.day10;
 
+import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -51,10 +52,21 @@ public class JSExecutor2 {
         //WebElement arguments - {element,link, link2)
         //from left --to right
         js.executeScript("arguments[0].click()",link);
+
+        WebElement button6 = driver.findElement(By.id("disappearing_button"));
+
+        js.executeScript("arguments[0].click()",button6);
+
+        BrowserUtils.wait(2);
+
+        WebElement result = driver.findElement(By.id("result"));
+
+        Assert.assertEquals(result.getText(),"Now it's gone!");
     }
 
     @AfterMethod
     public void tearDown(){
+        BrowserUtils.wait(2);
         driver.quit();
     }
 
