@@ -96,7 +96,22 @@ public class JSExecutor2 {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true)",link);
+        //why we put (true) ?
+        //scroll until it’s true, become visible
     }
+    @Test
+    public void scrollTest(){
+
+        driver.navigate().to("http://practice.cybertekschool.com/infinite_scroll");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        for(int i = 0; i<15;i++){
+            js.executeScript("window.scrollBy(0,1000");
+            BrowserUtils.wait(1);
+        }
+    }
+
+
 
     @AfterMethod
     public void tearDown(){
