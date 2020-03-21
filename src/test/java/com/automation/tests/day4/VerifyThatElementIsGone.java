@@ -15,7 +15,7 @@ public class VerifyThatElementIsGone {
      * How to check if element doesn't exists any more in DOM (Document Object Model
      * @param args
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().version("79").setup();
         WebDriver driver = new ChromeDriver();
@@ -24,6 +24,14 @@ public class VerifyThatElementIsGone {
 
         driver.findElement(By.id("disappearing_button")).click();
         Thread.sleep(2000);
+
+//        List<WebElement> list = driver.findElements(By.id("disappearing_button"));
+//         // if size is 0, that means no elements were found
+//        if(list.size()==0){
+//            System.out.println("test passed");
+//        }else{
+//            System.out.println("test failed");
+//        }
 
         if(driver.findElements(By.id("disappearing_button")).size() == 0){
             System.out.println("TEST PASSED");

@@ -53,13 +53,13 @@ public class FindElementsTest { // this topic is interview question StaleElement
             //noSuchElementException
             //
             //what happens if no elements weren't found, in case of findElements?
-            //nothing, you wil lget empty list
+            //nothing, you wilL get empty list
             //
-            //Interview quesion : how to check if element doesn't exists any more/just doesnt exist ?
+            //Interview question : how to check if element doesn't exists any more/just doesn't exist ?
             //
-            //if(driver.findElements(By.id("name").size()==0)){
-            //	element doesn't exist!!
-            //}
+//            if(driver.findElements(By.id("name").size()==0)){
+//            	element doesn't exist!!
+//            }
             //
             //You can use findElements method to find 0+ elements
             //
@@ -68,7 +68,7 @@ public class FindElementsTest { // this topic is interview question StaleElement
         }
 
         for (int i = 1; i <links.size() ; i++) {
-            links.get(i).click();
+            links.get(i).click();//driver.findElements(By.tagName("a")).get(i).click(); ---one shot code
 //            Thread.sleep(2000);
 
             driver.navigate().back();
