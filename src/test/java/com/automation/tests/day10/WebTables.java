@@ -5,6 +5,7 @@ import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -37,7 +38,17 @@ public class WebTables {
          for(WebElement columnName :columnNames){
              System.out.println(columnName.getText());
          }
-     }
+         Assert.assertEquals(BrowserUtils.getTextFromWebElements(columnNames),expected);
+         //BrowserUtils.getTextFromWebElements(columnNames) ==>
+// this method takes the text of every single webElement and puts it into collection of strings
 
+     }
+     @Test
+    public void verifyRowCount(){
+//           //tbody//tr--to get all rows from table body, excluding table header
+           List<WebElement> rows = driver.findElements(By.xpath("//table[1]//tbody//tr"));
+           //if we will get a size of this collection, it automatically equals to number of elements
+         Assert.assertEquals(rows.size(),4);
+     }
 
 }
