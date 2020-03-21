@@ -66,7 +66,7 @@ public class JSExecutor2 {
 
     @Test
     public void textInputText(){
-            driver.findElement(By.linkText("Form Authentication"));
+            driver.findElement(By.linkText("Form Authentication")).click();
             BrowserUtils.wait(3);
 
             WebElement username = driver.findElement(By.name("username"));
@@ -80,9 +80,21 @@ public class JSExecutor2 {
         js.executeScript("arguments[0].setAttribute('value','tomsmith')" , username);
         js.executeScript("arguments[0].setAttribute('value','SuperSecretPassword')",password);
         js.executeScript("arguments[0].click()", loginbtn);
+
+        BrowserUtils.wait(4);
+
+        String expected = "Welcome to the Secure Area. When you are done click logout below.";
+        String subheader = js.executeScript("return document.getElementsByClassName('subheader')[0].textContent").toString();
     }
 
+    @Test
+    public void scrollToElement(){
+        //href = link, URL
+        WebElement link = driver.findElement(By.linkText("Cybertek School"));
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("");
+    }
 
     @AfterMethod
     public void tearDown(){
