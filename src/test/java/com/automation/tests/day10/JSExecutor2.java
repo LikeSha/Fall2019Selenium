@@ -104,9 +104,8 @@ public class JSExecutor2 {
 
         driver.navigate().to("http://practice.cybertekschool.com/infinite_scroll");
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        for(int i = 0; i<15;i++){
-            js.executeScript("window.scrollBy(0,1000");
+        for (int i = 0; i < 15; i++) {
+            js.executeScript("window.scrollBy(0, 1000)");
             BrowserUtils.wait(1);
         }
     }
