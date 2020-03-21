@@ -17,7 +17,7 @@ public class JSExecutor2 {
 
     @BeforeMethod
     public void setup(){
-        driver = DriverFactory.createDriver("chrme");
+        driver = DriverFactory.createDriver("chrome");
         driver.get("http://practice.cybertekschool.com/");
         driver.manage().window().maximize();
     }
@@ -63,6 +63,26 @@ public class JSExecutor2 {
 
         Assert.assertEquals(result.getText(),"Now it's gone!");
     }
+
+    @Test
+    public void textInputText(){
+            driver.findElement(By.linkText("Form Authentication"));
+            BrowserUtils.wait(3);
+
+            WebElement username = driver.findElement(By.name("username"));
+            WebElement password = driver.findElement(By.name("password"));
+            WebElement loginbtn = driver.findElement(By.id("wooden_spoon"));
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            //to get text from input box --read attribute "value"
+        //to enter text --set attribute "value"
+
+        js.executeScript("arguments[0].setAttribute('value','tomsmith')" , username);
+        js.executeScript("arguments[0].setAttribute('value','SuperSecretPassword')",password);
+        js.executeScript("arguments[0].click()", loginbtn);
+    }
+
+
 
     @AfterMethod
     public void tearDown(){
