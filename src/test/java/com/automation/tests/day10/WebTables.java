@@ -92,23 +92,35 @@ public class WebTables {
     @Test
          public void getColumnIndexByName(){
 
-          String columnName = "Email";
+        String columnName = "Email";
 
-          List<WebElement> columnNames = driver.findElements(By.xpath("//table[2]//th"));
+        List<WebElement> columnNames = driver.findElements(By.xpath("//table[1]//th"));
 
-          int index = 0;
-          for(int i = 0; i< columnNames.size();i++){
-              if(columnNames.get(i).getText().equals(columnName)){
-                  index = i+1;
-              }
-          }
+        int index = 0;
 
-           Assert.assertEquals(index,3);
-
+        for (int i = 0; i < columnNames.size(); i++) {
+            String actualColumnName = columnNames.get(i).getText();
+            System.out.println(String.format("Column name: %s, position %s", actualColumnName, i));
+            if (actualColumnName.equals(columnName)) {
+                index = i + 1;
+                break;
+            }
+        }
+        Assert.assertEquals(index, 3);
 
 
          }
+          @Test
+         public void getSpecificCell(){
+              String expected = "http://www.jdoe.com" ;
+              int row = 3;
+              int column = 5;
+              String xpath = "//table[1]//tbody//tr[" +row+ "]//td[" +column + "]";
 
+              WebElement cell = driver.findElement(By.xpath(xpath));
+
+              Assert.assertEquals(cell.getText(),expected);
+         }
 
 
 }
