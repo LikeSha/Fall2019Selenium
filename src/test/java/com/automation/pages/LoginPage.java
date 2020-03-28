@@ -11,6 +11,7 @@ public class LoginPage {
     @FindBy(id="prependedInput")
     public WebElement username;
 
+
     @FindBy(id="prependedInput2")
     public WebElement password;
 
@@ -29,6 +30,7 @@ public class LoginPage {
 
     /**
      * Method to login, version #1
+     * login as a specific user
       * @param usernameValue
      * @param passwordValue
      */
@@ -42,6 +44,7 @@ public class LoginPage {
 
     /**
      * Method to login ,version #2
+     * Login as a default user
      * Credentials will be retrieved from configuration.properties file
      */
     public void login(){
