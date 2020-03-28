@@ -1,5 +1,6 @@
 package com.automation.pages;
 
+import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.ConfigurationReader;
 import com.automation.utilities.Driver;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ public class LoginPage {
 
     @FindBy(id="prependedInput")
     public WebElement username;
+    //    public WebElement username2 = Driver.getDriver().findElement(By.id("prependedInput"));
 
 
     @FindBy(id="prependedInput2")
@@ -39,6 +41,7 @@ public class LoginPage {
 
          username.sendKeys(usernameValue);
          password.sendKeys(passwordValue, Keys.ENTER);
+         BrowserUtils.wait(3);
         //this.username.sendKeys(username);
         //this.password.sendKeys(password);
      }
@@ -51,6 +54,7 @@ public class LoginPage {
     public void login(){
          username.sendKeys(ConfigurationReader.getProperty("store_manager"));
          password.sendKeys(ConfigurationReader.getProperty("password"),Keys.ENTER);
+         BrowserUtils.wait(3);
       }
 
 
