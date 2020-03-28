@@ -1,5 +1,6 @@
 package com.automation.pages;
 
+import com.automation.utilities.ConfigurationReader;
 import com.automation.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,5 +26,28 @@ public class LoginPage {
         //PageFactory--helps to find elements easier
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+    /**
+     * Method to login, version #1
+      * @param usernameValue
+     * @param passwordValue
+     */
+     public void login(String usernameValue,String passwordValue){  // String usernameValue, String passwordValue
+
+         username.sendKeys(usernameValue);
+         password.sendKeys(passwordValue);
+        //this.username.sendKeys(username);
+        //this.password.sendKeys(password);
+     }
+
+    /**
+     * Method to login ,version #2
+     * Credentials will be retrieved from configuration.properties file
+     */
+    public void login(){
+         username.sendKeys(ConfigurationReader.getProperty("store_manager"));
+         password.sendKeys(ConfigurationReader.getProperty("password"));
+      }
+
 
 }
