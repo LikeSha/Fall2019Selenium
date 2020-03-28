@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import sun.jvm.hotspot.debugger.Page;
+
 
 /**
  * This class will be extended by page classes
@@ -46,6 +46,8 @@ public abstract class AbstractPageBase {
                 pause(2000).
                 click(moduleElement).
                 build().perform();
+
+        BrowserUtils.wait(4);
 
     }
 
