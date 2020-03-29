@@ -3,6 +3,7 @@ package com.automation.tests.vytrack.activites;
 import com.automation.pages.LoginPage;
 import com.automation.pages.activities.CalendarEventsPage;
 import com.automation.tests.vytrack.AbstractTestBase;
+import com.automation.utilities.DateTimeUtilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,5 +25,36 @@ public class NewCalendarEventsTests extends AbstractTestBase {
         calendarEventsPage.navigateTo("Activities", "Calendar Events");
         calendarEventsPage.clickToCreateCalendarEvent();
         Assert.assertEquals(calendarEventsPage.getOwnerName(), calendarEventsPage.getCurrentUserName());
+
+        String actualStartDate = calendarEventsPage.getStartDate();
+        String expectedStartDate = DateTimeUtilities.getCurrentDate("MMM dd, yyyy");
+
+        Assert.assertEquals(actualStartDate,expectedStartDate);
+
     }
+
+    /**
+     * 15 minutes until 3:45
+     * Test Case : Time difference
+     * Login as sales manager
+     * Go to Activities -->Calendar Events
+     * Click on Create Calendar Event
+     * Verify that difference between start and end is 1 hour
+     */
+
+     @Test
+     public void timeDifferenceTest(){
+
+         loginPage.login();
+         calendarEventsPage.navigateTo("Activities", "Calendar Events");
+         calendarEventsPage.clickToCreateCalendarEvent();
+         Assert.assertEquals(calendarEventsPage.getOwnerName(), calendarEventsPage.getCurrentUserName());
+
+         String actualStartHour = calendarEventsPage.getStartTime();
+
+
+     }
+
+
+
 }
