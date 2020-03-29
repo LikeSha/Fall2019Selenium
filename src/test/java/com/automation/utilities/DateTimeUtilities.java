@@ -30,7 +30,7 @@ public class DateTimeUtilities {
      * @param start
      * @param end
      * @param format
-     * @return
+     * @return difference between end time and start time as a long
      */
      public static long getTimeDifference(String start,String end, String format){
 
