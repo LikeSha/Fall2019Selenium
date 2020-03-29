@@ -10,6 +10,11 @@ import java.util.List;
 
 public class BrowserUtils {
 
+    /**
+     * Pause test for some time
+     *
+     * @param seconds
+     */
     public static void wait(int seconds) {
         try {
             Thread.sleep(1000 * seconds);
@@ -19,16 +24,18 @@ public class BrowserUtils {
     }
 
     /**
+     *
      * @param elements represents collection of WebElements
      * @return collection of strings
      */
     public static List<String> getTextFromWebElements(List<WebElement> elements) {
         List<String> textValues = new ArrayList<>();
         for (WebElement element : elements) {
-            textValues.add(element.getText());
+            if (!element.getText().isEmpty()) {
+                textValues.add(element.getText());
+            }
         }
         return textValues;
-
     }
 
     /**
@@ -44,7 +51,6 @@ public class BrowserUtils {
         } catch (Throwable error) {
             error.printStackTrace();
         }
-
     }
 
     /**
@@ -56,5 +62,14 @@ public class BrowserUtils {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
-}
 
+    /**
+     * Scroll to element using JavaScript
+     *
+     * @param element
+     */
+    public static void scrollTo(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+}
