@@ -3,6 +3,9 @@ package com.automation.tests.vytrack;
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.ConfigurationReader;
 import com.automation.utilities.Driver;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +17,10 @@ public abstract class AbstractTestBase {
     //will be visible in the subclass , regardless on subclass location(same package or no)
     protected WebDriverWait wait;
     protected Actions actions;
+
+    protected ExtentReports report;
+    protected ExtentHtmlReporter htmlReproter;
+    protected ExtentTest test;
 
     @BeforeMethod
     public void setup(){
