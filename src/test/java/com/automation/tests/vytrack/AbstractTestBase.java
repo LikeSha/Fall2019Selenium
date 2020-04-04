@@ -23,7 +23,7 @@ public abstract class AbstractTestBase {
     protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest test;
     //@Optional -- to make parameter optional
-    //if you don't specify it , testng will require to specify this parameter for every test , in xml
+    //if you don't specify it , testng will require to specify this parameter for every test , in xml runner
 
     @BeforeTest
     @Parameters("reportName")
