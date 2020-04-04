@@ -5,6 +5,7 @@ import com.automation.tests.vytrack.AbstractTestBase;
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.Driver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class NewLoginTest extends AbstractTestBase {
@@ -21,6 +22,7 @@ public class NewLoginTest extends AbstractTestBase {
          test = report.createTest("Verify page title");
          LoginPage loginPage = new LoginPage();
          loginPage.login();
+         test.info("Login as store manager");//log some steps
          Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
          //if assertion passed , it wil set test status in report to passed
          test.pass("Page title Dashboard was verified");
@@ -32,10 +34,26 @@ public class NewLoginTest extends AbstractTestBase {
      */
      @Test
     public void verifyWarningMessage(){
+         test = report.createTest("Verify warning message");
+
          LoginPage loginPage = new LoginPage();
          loginPage.login("wrong", "wrong");
          Assert.assertEquals(loginPage.getWarningMessageText(), "Invalid user name or password.");
          //take a screenshot
          BrowserUtils.getScreenshot("warning_message");
+
+         test.pass("Warning message is displayed");
      }
+      //Object[][] or Object[] or Iterator<Object[]>
+    //Object[] --1 column with a data
+    //Object[][] 2+
+     @DataProvider
+    public Object[][] credentials(){
+         return new Object[][]{
+                 {"storemanager85","UserUser123"},
+                 {"salesmanager110", "UserUser123"},
+                 {"user16",          "UserUser123"},
+         };
+      }
+
 }
