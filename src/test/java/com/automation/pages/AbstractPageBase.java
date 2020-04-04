@@ -22,13 +22,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPageBase {
     protected WebDriver driver = Driver.getDriver();
-    protected WebDriverWait wait = new WebDriverWait(driver,15);
+    protected WebDriverWait wait = new WebDriverWait(driver, 25);
 
-    @FindBy(css = "#user-menu>a")
+    @FindBy(css = "#user-menu > a")
     protected WebElement currentUser;
 
-    public AbstractPageBase(){
-        PageFactory.initElements(driver,this);
+    public AbstractPageBase() {
+        PageFactory.initElements(driver, this);
     }
 
 
@@ -37,16 +37,16 @@ public abstract class AbstractPageBase {
         wait.until(ExpectedConditions.visibilityOf(currentUser));
         return currentUser.getText().trim();
     }
-    /**
-     * Method for vytrack navigation, Provide tab name and module name to navigate
-     * @param tabName like Dashboards, Fleet or Customers
-     * @param moduleName Like Vehicles, Vehicles Odometer and Vehicle Costs
-     */
 
-    public void navigateTo(String tabName,String moduleName){
+
+    /**
+     * Method for vytrack navigation. Provide tab name and module name to navigate
+     * @param tabName, like Dashboards, Fleet or Customers
+     * @param moduleName, like Vehicles, Vehicles Odometer and Vehicles Costs
+     */
+    public void navigateTo(String tabName, String moduleName) {
         String tabNameXpath = "//span[@class='title title-level-1' and contains(text(),'" + tabName + "')]";
         String moduleXpath = "//span[@class='title title-level-2' and text()='" + moduleName + "']";
-
 
         WebElement tabElement = driver.findElement(By.xpath(tabNameXpath));
         WebElement moduleElement = driver.findElement(By.xpath(moduleXpath));
@@ -60,9 +60,8 @@ public abstract class AbstractPageBase {
                 click(moduleElement).
                 build().perform();
 
+        //increase this wait rime if still failing
         BrowserUtils.wait(4);
-
     }
-
 
 }
