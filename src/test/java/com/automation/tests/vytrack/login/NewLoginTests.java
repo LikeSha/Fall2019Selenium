@@ -14,7 +14,7 @@ public class NewLoginTests extends AbstractTestBase {
      * Login and verify that page title is a "Dashboard"
      * 10 minutes
      */
-     @Test
+     @Test(groups = "smoke")
     public void verifyPageTitle(){
          //test is coming from ExtentTest
          //we must add to every test at the beginning
