@@ -29,13 +29,20 @@ public abstract class AbstractTestBase {
     @Parameters("reportName")
     public void setupTest(@Optional String reportName){
         System.out.println("Report name : " + reportName);
+        reportName  = reportName==null?"report.html":reportName+".html";
+        //if the report name is provided in testng xml file;
+        //use that file to create report based on that report name
+        //else create report name as default
+
+
         report = new ExtentReports();
+
         String reportPath = "";
         //location of report file
         if(System.getProperty("os.name").toLowerCase().contains("win")){
-            reportPath = System.getProperty("user.dir")+"\\test-output\\report.html";
+            reportPath = System.getProperty("user.dir")+"\\test-output\\"+ reportName;
         }else{
-            reportPath = System.getProperty("user.dir")+"/test-output/report.html";
+            reportPath = System.getProperty("user.dir")+"/test-output/" + reportName;
         }
         //is a HTML report itself
         htmlReporter = new ExtentHtmlReporter(reportPath);
