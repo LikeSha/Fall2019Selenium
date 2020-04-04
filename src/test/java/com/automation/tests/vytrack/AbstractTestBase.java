@@ -20,8 +20,10 @@ public abstract class AbstractTestBase {
     protected Actions actions;
 
     protected ExtentReports report;
-    protected ExtentHtmlReporter htmlReproter;
+    protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest test;
+    //@Optional -- to make parameter optional
+    //if you don't specify it , testng will require to specify this parameter for every test , in xml
 
     @BeforeTest
     @Parameters("reportName")
@@ -36,10 +38,10 @@ public abstract class AbstractTestBase {
             reportPath = System.getProperty("user.dir")+"/test-output/report.html";
         }
         //is a HTML report itself
-        htmlReproter = new ExtentHtmlReporter(reportPath);
+        htmlReporter = new ExtentHtmlReporter(reportPath);
         //add it to the reporter
-        report.attachReporter(htmlReproter);
-        htmlReproter.config().setReportName("VYTRACK Test Automation Result");
+        report.attachReporter(htmlReporter);
+        htmlReporter.config().setReportName("VYTRACK Test Automation Result");
     }
 
      @AfterTest
