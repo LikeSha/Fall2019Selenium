@@ -5,6 +5,7 @@ import com.automation.pages.activities.CalendarEventsPage;
 import com.automation.tests.vytrack.AbstractTestBase;
 import com.automation.utilities.DateTimeUtilities;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -71,7 +72,24 @@ public class NewCalendarEventsTests extends AbstractTestBase {
           Assert.assertEquals(calendarEventsPage.getColumnNames(), expected);
       }
 
- //     public Object[]
+      @Test(dataProvider = "calendarEvents")
+      public void createCalendarEventTest(String title,String description){
+         test = report.createTest("Create calendar event");
+         loginPage.login();
+         calendarEventsPage.navigateTo("Activities","Calendar Events");
+         calendarEventsPage.clickToCreateCalendarEvent();
+         calendarEventsPage.enterCalendarEventTitle(title);
+         calendarEventsPage.enterCalendarEventDescription(description);
+         calendarEventsPage.clickOnSaveAndClose();
+
+      }
+
+      @DataProvider
+      public Object[][]  calendarEvents(){
+         return new Object[][]{
+                 {"Daily stand-up","Scrum meeting to provide updates"}
+         };
+      }
 
 
 }
