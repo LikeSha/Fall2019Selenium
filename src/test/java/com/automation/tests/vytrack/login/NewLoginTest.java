@@ -44,7 +44,8 @@ public class NewLoginTest extends AbstractTestBase {
 
          test.pass("Warning message is displayed");
      }
-    @Test(dataProvider = "credentials")
+
+     @Test(dataProvider = "credentials")
     public void loginWithDDT(String userName, String password) {
         test = report.createTest("Verify page title" + userName);
         LoginPage loginPage = new LoginPage();
