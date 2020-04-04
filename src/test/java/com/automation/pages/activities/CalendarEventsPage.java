@@ -70,6 +70,7 @@ public class CalendarEventsPage extends AbstractPageBase {
     }
 
    public String getGeneralInfoTitle(){
+        BrowserUtils.waitForPageToLoad(20);
         return generalInfoTitle.getText();
    }
 
