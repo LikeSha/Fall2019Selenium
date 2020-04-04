@@ -65,8 +65,19 @@ public class CalendarEventsPage extends AbstractPageBase {
     }
 
     public void clickOnSaveAndClose(){
-        BrowserUtils.clickWithJS(saveAndClose); // or we can use saveAndClose.click();
+        wait.until(ExpectedConditions.elementToBeClickable(saveAndClose)).click();
+      //  BrowserUtils.clickWithJS(saveAndClose); // or we can use saveAndClose.click();
     }
+
+   public String getGeneralInfoTitle(){
+        return generalInfoTitle.getText();
+   }
+
+   public String getGeneralInfoDescriptionText(){
+        BrowserUtils.waitForPageToLoad(20);
+        return generalInfoDescription.getText();
+   }
+
     public List<String> getColumnNames(){
         BrowserUtils.waitForPageToLoad(20);
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[")));
