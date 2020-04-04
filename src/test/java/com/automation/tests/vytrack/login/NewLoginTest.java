@@ -44,15 +44,26 @@ public class NewLoginTest extends AbstractTestBase {
 
          test.pass("Warning message is displayed");
      }
-      //Object[][] or Object[] or Iterator<Object[]>
-    //Object[] --1 column with a data
-    //Object[][] 2+
-     @DataProvider
+    @Test(dataProvider = "credentials")
+    public void loginWithDDT(String userName, String password) {
+        test = report.createTest("Verify page title" + userName);
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(userName, password);
+        test.info("Login as " + userName);//log some steps
+        BrowserUtils.wait(2);
+        Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
+        test.pass("Page title Dashboard was verified");
+    }
+     //Object[][] or Object[] or Iterator<Object[]>
+     //Object[] - 1 column with a data
+     //Object[][] 2+
+
+    @DataProvider
     public Object[][] credentials(){
          return new Object[][]{
                  {"storemanager85","UserUser123"},
                  {"salesmanager110", "UserUser123"},
-                 {"user16",          "UserUser123"},
+                 {"user16",          "UserUser123"}
          };
       }
 
