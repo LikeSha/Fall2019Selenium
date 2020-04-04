@@ -1,4 +1,4 @@
-package com.automation.tests.vytrack.activites;
+package com.automation.tests.vytrack.activities;
 
 
 

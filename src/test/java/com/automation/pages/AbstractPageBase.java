@@ -11,15 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 /**
  * This class will be extended by page classes
- * Any common webelements/locators can be stored here
+ * Ant common webelements/locators can be stored here
  * Since navigation menu doesn't belong to particular page
  * We cannot really create a dedicated page class to store
- * elements
+ * elements from that menu
  */
-
 public abstract class AbstractPageBase {
     protected WebDriver driver = Driver.getDriver();
     protected WebDriverWait wait = new WebDriverWait(driver, 25);
@@ -64,4 +62,6 @@ public abstract class AbstractPageBase {
         BrowserUtils.wait(4);
     }
 
+
 }
+
