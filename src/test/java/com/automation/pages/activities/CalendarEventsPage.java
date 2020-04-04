@@ -47,7 +47,7 @@ public class CalendarEventsPage extends AbstractPageBase {
     @FindBy(xpath = "(//div[@class='control-label'])[1]")
     private WebElement generalInfoTitle;
 
-    @FindBy(xpath = "//label[text()='Description']/following-sibling::div//p[1]")
+    @FindBy(xpath = "//label[text()='Description']/following-sibling::div//div")
     private WebElement generalInfoDescription;
 
 

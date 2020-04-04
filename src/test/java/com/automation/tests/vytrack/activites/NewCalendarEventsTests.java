@@ -82,6 +82,11 @@ public class NewCalendarEventsTests extends AbstractTestBase {
          calendarEventsPage.enterCalendarEventDescription(description);
          calendarEventsPage.clickOnSaveAndClose();
 
+         Assert.assertEquals(calendarEventsPage.getGeneralInfoDescriptionText(),description);
+         Assert.assertEquals(calendarEventsPage.getGeneralInfoTitle(),title);
+
+         test.pass("Calendar event was created successfully!");
+
       }
 
       @DataProvider
