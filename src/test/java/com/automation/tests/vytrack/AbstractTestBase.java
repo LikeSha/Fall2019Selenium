@@ -58,7 +58,7 @@ public abstract class AbstractTestBase {
 
     @BeforeMethod
     public void setup(){
-        String URL = ConfigurationReader.getProperty("qa1");
+        String URL = ConfigurationReader.getProperty("qa3");
         Driver.getDriver().get(URL);
         Driver.getDriver().manage().window().maximize();
         wait = new WebDriverWait(Driver.getDriver(),15);
@@ -70,7 +70,7 @@ public abstract class AbstractTestBase {
 
     @AfterMethod
     public void tearDown(ITestResult iTestResult) throws IOException {
-        //ITestResult calss describes the result of a test
+        //ITestResult class describes the result of a test
         //if test failed ,take a screenshot
        if(iTestResult.getStatus()==ITestResult.FAILURE){
            //screenshot will have a name of the test
