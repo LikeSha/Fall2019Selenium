@@ -61,6 +61,10 @@ public class ExcelUtil {
 
     }
 
+    /**
+     * Get data as a List<Map<<String,String>>,where key name represents column name
+     * @return
+     */
     public List<Map<String, String>> getDataList() {
         // get all columns
         List<String> columns = getColumnsNames();
@@ -93,6 +97,12 @@ public class ExcelUtil {
         return columns;
     }
 
+    /**
+     * Write something into excel file
+     * @param value
+     * @param rowNum
+     * @param colNum
+     */
     public void setCellData(String value, int rowNum, int colNum) {
         Cell cell;
         Row row;
