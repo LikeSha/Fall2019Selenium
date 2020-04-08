@@ -24,7 +24,7 @@ public class ReadDataFromExcel {
         //get string value
         String value = firstCell.getStringCellValue();
 
-        String secondCellValue =firstRow.getCell(1).getStringCellValue();
+        String secondCellValue = firstRow.getCell(1).getStringCellValue();
 
         System.out.println(value);
         System.out.println(secondCellValue);
@@ -32,13 +32,13 @@ public class ReadDataFromExcel {
         int lastCell = firstRow.getLastCellNum();
         System.out.println("######################");
 
-        for(int i = 0; i<lastCell;i++){
-            System.out.print(firstRow.getCell(i)+" | ");
+        for (int i = 0; i < lastCell; i++) {
+            System.out.print(firstRow.getCell(i) + " | ");
         }
 
         // last row is 16the--->index is 15
         //index of last row
-        int numberOfRows = workSheet.getLastRowNum() ;
+        int numberOfRows = workSheet.getLastRowNum();
         //returns how many rows at all
         int numberOfRows2 = workSheet.getPhysicalNumberOfRows();
 
@@ -46,5 +46,15 @@ public class ReadDataFromExcel {
 
         System.out.println("number Of Rows = " + numberOfRows2);
 
+        System.out.println("#############################");
+
+        for (int row = 0; row < workSheet.getPhysicalNumberOfRows(); row++) {
+            for (int cell = 0; cell < workSheet.getRow(row).getLastCellNum(); cell++) {
+                String cellValue = workSheet.getRow(row).getCell(cell).getStringCellValue();
+                System.out.print(cellValue + " | ");
+
+            }
+            System.out.println();
+        }
     }
 }
