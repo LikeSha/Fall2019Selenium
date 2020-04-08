@@ -6,8 +6,10 @@ import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.Driver;
 import com.automation.utilities.ExcelUtil;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import sun.rmi.runtime.Log;
 
 public class NewLoginTests extends AbstractTestBase {
 
@@ -70,6 +72,23 @@ public class NewLoginTests extends AbstractTestBase {
          };
       }
 
+      @Test(dataProvider = "credentialsFromExcel")
+      public void loginTestWithExcel(String execute, String username,String password,String firstname,String lastname,String result){
+         test = report.createTest("Login test for username::" + username);
+         if(execute.equals("y")){
+             LoginPage loginPage = new LoginPage();
+             loginPage.login(username,password);
+             test.info("Login as " + username); // log some steps
+             test.pass("Successfully logged in as " + username);
+             test.info(String.format("First name: %s, Last name: %s, Username: %s", firstname, lastname, username));
+         }else{
+             test.skip("Test was skipped for user: "+ username);
+             //to skip some tests in testing
+             throw new SkipException("Test was skipped");
+         }
+      }
+
+      @DataProvider
       public Object[][] credentialsFromExcel(){
          String path = "VytrackTestUsers.xlsx";
          String spreadSheet = "QA3-short";
