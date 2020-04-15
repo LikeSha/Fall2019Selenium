@@ -93,6 +93,7 @@ public abstract class AbstractTestBase {
            }
 
        }
+        BrowserUtils.wait(2);
         Driver.closeDriver();
     }
 
