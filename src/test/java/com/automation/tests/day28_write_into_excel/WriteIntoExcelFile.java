@@ -19,9 +19,13 @@ public class WriteIntoExcelFile {
         Sheet sheet= workbook.getSheet("QA3-short");
         Row row = sheet.getRow(1);//second row
         Cell cell = row.getCell(row.getLastCellNum()-1);//last column
-        System.out.println(cell.getStringCellValue());
-        cell.setCellValue("PASSED");//I am changing from n/a to passed
 
+        System.out.println("Before : " + cell.getStringCellValue());
+        cell.setCellValue("PASSED");//I am changing from n/a to passed
+        System.out.println("After : " + cell.getStringCellValue());
+
+        //I create if I want to write something into the file
+        //don't forget to close excel file if you opened it
         FileOutputStream outputStream = new FileOutputStream("VytrackTestUsers.xlsx");
         workbook.write(outputStream);
         workbook.close();
