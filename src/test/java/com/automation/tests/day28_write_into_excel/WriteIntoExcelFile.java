@@ -34,6 +34,7 @@ public class WriteIntoExcelFile {
         Row secondRow = sheet.getRow(1);
         Cell newCell2 = secondRow.createCell(6);
         newCell2.setCellValue(LocalDate.now().toString());//I will set current date and time info into new cell
+        //newCell2.setCellValue(DateTimeUtilities.getCurrentDate("MMM d, yyyy"));
 
         //whenever you create a cell, it does not mean that all cell under neat will created automatically
        //So first we created object of second row then we created new cell and write date and time information
