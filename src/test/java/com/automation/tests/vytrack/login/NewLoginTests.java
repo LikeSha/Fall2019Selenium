@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import sun.rmi.runtime.Log;
+
 
 public class NewLoginTests extends AbstractTestBase {
 
