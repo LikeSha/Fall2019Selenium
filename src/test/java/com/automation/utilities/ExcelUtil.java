@@ -36,6 +36,12 @@ public class ExcelUtil {
         }
     }
 
+    /**
+     * Get the data of specific cell
+     * @param rowNum starting with 0
+     * @param colNum starting with 0
+     * @return
+     */
     public String getCellData(int rowNum, int colNum) {
         Cell cell;
         try {
