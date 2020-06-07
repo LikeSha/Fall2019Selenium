@@ -8,7 +8,7 @@ public class MyFirstSeleniumScript {
     public static void main(String[] args) {
 
         //setup chromedriver
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         //create chromedriver object
         ChromeDriver driver = new ChromeDriver();
         //open some website
