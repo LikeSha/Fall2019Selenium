@@ -56,6 +56,8 @@ public class FindElementById {
         // WebElement logout = driver.findElement(By.linkText(" Logout"));
         // pay attention , linkText(" Logout")---there is a space in front of Logout
         // this case it worked ,we tested ,however, better to use partialLinkText.
+        //in this case ,if you use partialLinkText ,you can just remove the space which
+        //in front of " Logout"
 
         String href = logout.getAttribute("href"); // orange color is attribute in "inspect"
         String className = logout.getAttribute("class");
