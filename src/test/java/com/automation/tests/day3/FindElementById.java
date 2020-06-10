@@ -48,11 +48,14 @@ public class FindElementById {
         // lets click on Logout button, It looks like a button, but it's actually a link
         //every element with <a> tag is a link
         //if you have couple spaces in the text, just use partialLinkText instead of linkText
-        //partialLinkText---contains()--complete match doesn't required
+        //partialLinkText, its like contains()--complete match doesn't required
         //linkText requires exact match ,partialLinkText allows you have spaces when testing
         //and fix itself
         //don't put space
         WebElement logout = driver.findElement(By.partialLinkText("Logout"));
+        // WebElement logout = driver.findElement(By.linkText(" Logout"));
+        // pay attention , linkText(" Logout")---there is a space in front of Logout
+        // this case it worked ,we tested ,however, better to use partialLinkText.
 
         String href = logout.getAttribute("href"); // orange color is attribute in "inspect"
         String className = logout.getAttribute("class");
