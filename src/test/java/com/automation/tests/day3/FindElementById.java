@@ -17,6 +17,14 @@ public class FindElementById {
         driver.findElement(By.name("username")).sendKeys("tomsmith");
         Thread.sleep(2000);
 
+        // WebElement password is called " reference variable "
+        // the " =" right side findElement() returns you webElement itself
+        //in java ,you can use object without creating reference variable ,
+        // so on the right side ,you have an object : driver.findElement(By.name("password"));
+        // this is reference variable " WebElement password" to call that object from the memory
+        // so when you want to use an object more than once , you create reference variable
+        // or I can direct use object without crating reference variable , like :
+        //driver.findElement(By.name("password")).sendKeys("SuperSecretPassword");
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("SuperSecretPassword");
 

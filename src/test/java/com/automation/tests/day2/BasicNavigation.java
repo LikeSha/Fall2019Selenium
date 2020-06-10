@@ -9,14 +9,14 @@ public class BasicNavigation {
 
         // to start selenium script we need :
         // setup webdriver(browser driver) and create webdriver object
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver();
 
         // In selenium, everything starts from WebDriver interface
         // ChromeDriver extends RemoteWebDriver--> implements WebDriver
         driver.get("http://google.com");// to open a website
         driver.manage().window().maximize();
-      //  driver.manage().window().fullscreen();
+       //  driver.manage().window().fullscreen();
 
         Thread.sleep(3000);// for demo, wait 3 seconds
         // method that return page title
@@ -75,7 +75,11 @@ public class BasicNavigation {
      * @param arg1
      * @param arg2
      */
-    public static void verifyEquals(String arg1,String arg2){  // static methods accepts only static members
+    public static void verifyEquals(String arg1,String arg2){
+        // static methods accepts only static members
+        //why this method is static ? because main method is static as well ,
+        //as you know the rule : static can not call non-static ,we have to
+        //make this method static as well.
         if(arg1.equals(arg2)){
             System.out.println("test passed!!");
         }else{

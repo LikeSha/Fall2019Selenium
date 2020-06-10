@@ -13,7 +13,7 @@ import java.util.Iterator;
 public class SeleniumOH1 {
 
     /**
-     * --Iterator
+     *   --Iterator
      *   --List, Set, Map and other types of collections can use Iterator class to iterate over
      *          that collection
      *   -- List has indexes ( for i , for each, Iterator)
