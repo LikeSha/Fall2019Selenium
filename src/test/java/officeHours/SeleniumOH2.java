@@ -28,24 +28,31 @@ public class SeleniumOH2 {
         //WebElement--class in selenium/java and it has many useful methods
         //.sendKeys("value that we want to send--input)
         search_box.sendKeys("tshirt" + Keys.ENTER);
+        //  search_box.sendKeys("tshirt" , Keys.ENTER); you can also use , here between tshrt and Keys.ENTER
         // after running this code ,the result shows as below in inspect :
         /*
        <p class="alert alert-warning">
-                No results were found for your search "tshirt" </p>
-
+					No results were found for your search&nbsp;"thsirt"
+			</p>
          */
         // so I decide do this :
 
-
-
+        try {
+            Thread.sleep(3000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
         WebElement error = driver.findElement(By.xpath("//p[@class='alert alert-warning']"));
         String errorText = error.getText();
         //.getText()--> returns String(text) from the element
         System.out.println("Error message : " + errorText);
         //NoSuchElementException --it means we could not locate the element
 
+        search_box = driver.findElement(By.id("search_query_top"));
+        search_box.clear();
+        //.clear() method---(void)  it will delete any values from input box   void means doesn't return anything
         search_box.sendKeys("t-shirt" + Keys.ENTER);
-        //StaleElementReferenceExeption---element is old/stale--we want to find
+        //StaleElementReferenceException---element is old/stale--we want to find
         //this element again OR refresh page
 
         Thread.sleep(5000);
