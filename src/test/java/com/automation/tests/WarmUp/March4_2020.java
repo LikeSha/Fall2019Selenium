@@ -38,7 +38,7 @@ public class March4_2020 {
      * click on search button
      * verify title contains search term
      */
-    public static void amazonTest() throws Exception {
+    public static void amazonTest()throws Exception  {
         driver = DriverFactory.createDriver("chrome");
         driver.get("http://amazon.com");
         //enter text and click ENTER

@@ -12,7 +12,7 @@ public class FindElementsTest { // this topic is interview question StaleElement
 
     public static void main(String[] args) throws Exception {
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/");
 
@@ -25,46 +25,53 @@ public class FindElementsTest { // this topic is interview question StaleElement
             System.out.println(link.getText());
             System.out.println(link.getAttribute("href"));
             System.out.println();
-//            link.click(); //click on link  // we stop these 3 line code because it throw StaleElementReferenceException
-//            Thread.sleep(3000);
-//            driver.navigate().back();
-            //StaleElementReferenceException : stale element reference :
-            // element is not attached to the page document
-            //
-            //Interview question : what is StaleElementReferenceException
-            //
-            //StaleElementReferenceException---means that selenium cannot find previously located element.
-            // It happens , when you are trying to interact with element after page refresh or navigation
-            //
-            //How to handle it ?
-            //
-            //--if it occurs, you need to find element again
-            //
-            //try{
-            //	//if it generaets exception once in a while
-            //	//put it into try/catch and try to find element one more time
-            //	driver.findElement(By.id("name")).click()
-            //
-            //}catch(StaleElementReferenceException e){
-            //	driver.findElement(By.id("name")).click()
-            //}
-            //
-            //what happens if element wasn't found, in case of findElement?
-            //noSuchElementException
-            //
-            //what happens if no elements weren't found, in case of findElements?
-            //nothing, you wilL get empty list
-            //
-            //Interview question : how to check if element doesn't exists any more/just doesn't exist ?
-            //
-//            if(driver.findElements(By.id("name").size()==0)){
-//            	element doesn't exist!!
-//            }
-            //
-            //You can use findElements method to find 0+ elements
-            //
-            //In case of findElement ---only 1 element .
-            // if there is no element by given locator--NoSuchElementException
+
+            /**
+             * link.click(); //click on link  // we stop these 3 line code because it throw StaleElementReferenceExceptionThread.sleep(3000);
+             * driver.navigate().back();
+             * StaleElementReferenceException : stale element reference :
+             * element is not attached to the page document
+             *
+             * Interview question : what is StaleElementReferenceException
+             *
+             * StaleElementReferenceException---means that selenium cannot find previously located element.
+             * It happens , when you are trying to interact with element after page refresh or navigation
+             *
+             *  How to handle it ?
+             *
+             * --if it occurs, you need to find element again
+             *
+             *  try{
+             *  if it generaets exception once in a while
+             *  put it into try/catch and try to find element one more time
+             *  driver.findElement(By.id("name")).click()
+             *
+             *  }catch(StaleElementReferenceException e){
+             *    driver.findElement(By.id("name")).click()
+             * }
+             *
+             *  try catch block is just like second chance to to find element ,
+             *  if try not works ,then catch works
+             *
+             * what happens if element wasn't found, in case of findElement?
+             * noSuchElementException
+             *
+             * what happens if no elements weren't found, in case of findElements?
+             * nothing, you wilL get empty list
+             *
+             * Interview question : how to check if element doesn't exists any more/just doesn't exist ?
+             *
+             * if(driver.findElements(By.id("name").size()==0)){
+             * element doesn't exist!!
+             *  }
+             *
+             *   You can use findElements method to find 0+ elements
+             *
+             * In case of findElement ---only 1 element .
+             * if there is no element by given locator--NoSuchElementException
+             *
+             */
+
         }
 
         for (int i = 1; i <links.size() ; i++) {
