@@ -17,7 +17,7 @@ public class VerifyThatElementIsGone {
      */
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
         Thread.sleep(2000);
