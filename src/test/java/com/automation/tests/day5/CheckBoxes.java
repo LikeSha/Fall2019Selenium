@@ -13,7 +13,7 @@ public class CheckBoxes {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/checkboxes");
         BrowserUtils.wait(5);
