@@ -19,7 +19,7 @@ public class RegistrationForm {
         BrowserUtils.wait(4);
 
         //enter first name
-        driver.findElement(By.name("firstname")).sendKeys("SDET");
+        driver.findElement(By.name("firstname")).sendKeys("John");
         driver.findElement(By.name("lastname")).sendKeys("Smith");
         driver.findElement(By.name("username")).sendKeys("jsmith");
         driver.findElement(By.name("email")).sendKeys("jsmith@email.com");

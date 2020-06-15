@@ -11,7 +11,7 @@ public class NestedFrame {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://practice.cybertekschool.com/nested_frames");

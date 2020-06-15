@@ -14,7 +14,7 @@ public class CheckBoxesTest {
     public static void main(String[] args) {
         // click " shift " twice , then input " break " , then select " remove all break points "
         // the all break point after you debug will removed immediately in the same time
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/checkboxes");
         //TASK

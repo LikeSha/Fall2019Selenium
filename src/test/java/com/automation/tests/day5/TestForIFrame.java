@@ -11,14 +11,24 @@ public class TestForIFrame {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/iframe");
         BrowserUtils.wait(4);
         //before looking for that element ,we need to jump to that frame
-        // you can pseicfy : name, if, index or webelement of the frame
+        // you can specify : name, id, index or webelement of the frame
         //it's like we are jumping to another layer
-        driver.switchTo().frame("mce_0_ifr");
+        driver.switchTo().frame("mce_0_ifr");//driver.switchTo().frame("nameOrId"); by id or name of the frame
+        //driver.switchTo().frame(index);      by frame index, starting from 0
+        //if there is only 1 frame = index will be 0
+        //if there are 2 frames - first one will have index 0, second one index 1.
+
+        //if frame doesn't have a name or id,and index doesn't give accurate frame position, use webelement
+        //for example below method :
+        //WebElement frameElement = driver.findElement(By.className("someFrame"));
+        //driver.switchTo().frame(frameElement);
+
+
         //now , this content will be visible
         WebElement textInput = driver.findElement(By.id("tinymce"));
 
