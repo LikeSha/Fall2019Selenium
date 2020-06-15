@@ -32,10 +32,10 @@ public class RegistrationForm {
 
         driver.findElement(By.name("birthday")).sendKeys("01/01/2007");
 
-        driver.findElement(By.id("inlineCheckbox2")).click();
+        driver.findElement(By.id("inlineCheckbox2")).click();//check boxes select java
 
         BrowserUtils.wait(2);
-        driver.findElement(By.id("wooden_spoon")).click();
+        driver.findElement(By.id("wooden_spoon")).click(); //sign up button
         BrowserUtils.wait(2);
 
         //ADD VALIDATION PART
