@@ -34,19 +34,22 @@ public class SelectByText {
         selectMonth.selectByVisibleText("February"); // pay attention to this part,
         // if select by value then in () put correspondence number ,january 1, February 2....
         //if selectByVisivleText must put text inside () ,text is BLACK COLOR
-        selectDay.selectByVisibleText("1");
+        selectDay.selectByVisibleText("22");
 
 
         //select all months one by one
+        //getOptions() --returns all options from dropdown as List<WebElement>
         List<WebElement> months = selectMonth.getOptions();
         for(WebElement eachMonth : months){
             // get the month name and select based on that
             String monthName = eachMonth.getText();
             selectMonth.selectByVisibleText((monthName));
+            // selectMonth.selectByVisibleText(eachMonth.getText());
             BrowserUtils.wait(1);
 
         }
         BrowserUtils.wait(5);
+
         Select stateSelect = new Select(driver.findElement(By.id("state")));
         stateSelect.selectByVisibleText("District Of Columbia");
         // option that is currently selected
