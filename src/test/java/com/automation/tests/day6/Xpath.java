@@ -15,7 +15,7 @@ public class Xpath {
         BrowserUtils.wait(3);
         //value can be inside '' or ""
         //if you don't know the tag name ,or want to skip tag name, use *
-        //for example //*[@onclick='button()'] \| * means any tag name
+        //for example //*[@onclick='button()'] | * means any tag name
         WebElement btn1 = driver.findElement(By.xpath("//button[@onclick='button1()']"));
         btn1.click();
 
@@ -32,6 +32,8 @@ public class Xpath {
         System.out.println(result.getText());
 
         WebElement btn4 = driver.findElement(By.xpath("//button[contains(@id,'_button')][1]"));
+        // there are two _button, so we
+        //have to add [1] followed contain part ,to specify we are reffering to the first element
         btn4.click();
         System.out.println(result.getText());
 
