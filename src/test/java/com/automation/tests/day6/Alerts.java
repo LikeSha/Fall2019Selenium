@@ -77,7 +77,7 @@ public class Alerts {
         alert.sendKeys("Hello,World!");
         alert.accept();//click ok
 
-        String expected3 = "Hello,World!";
+        String expected3 = "You entered: Hello,World!";
         String actual3 = driver.findElement(By.id("result")).getText();
 
         if(actual3.endsWith(expected3)){
