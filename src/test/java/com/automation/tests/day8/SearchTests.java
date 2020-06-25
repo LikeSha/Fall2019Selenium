@@ -46,6 +46,7 @@ public class SearchTests {
     }
 
     /**
+     * BELOW FEW LINE SENTENCES ARE " TEST SCENARIO" IN TESTNG FRAMEWORK
      * Given user is on the amazon.com page
      * when user enters "Java" as a search item
      * then user clicks on the search button
@@ -75,7 +76,7 @@ public class SearchTests {
         searchItems.get(0).click();
         BrowserUtils.wait(5);
 
-        WebElement productTitle = driver.findElement(By.id("title"));
+        WebElement productTitle = driver.findElement(By.id("productTitle"));
         String productTitleString = productTitle.getText();
         System.out.println(productTitleString);
 
