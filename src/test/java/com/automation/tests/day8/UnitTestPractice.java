@@ -9,7 +9,7 @@ public class UnitTestPractice {
         //unit test
         //to check if our method works properly
         //if assertion fails, that means our method doesn't work correctly
-        //that means we have fix the method
+        //that means we have to fix the method
         String expected = "cba";
         String toReverse = "abc";
         String actual = reverseString(toReverse);
