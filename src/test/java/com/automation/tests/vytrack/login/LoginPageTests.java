@@ -34,7 +34,8 @@ public class LoginPageTests {
     ////it returns By data type and we stored it in to By as above statement.
     // > in css Selector means same thing as / in xpath ,go to direct child
     private By warningMessageBy = By.cssSelector("[class='alert alert-error'] > div");
-    //"[class='alert alert-error'] > div" <<--- this greater sign( >) means go to the child
+    //"[class='alert alert-error'] > div" <<--- this greater sign( >) this means direct go to next one child ,
+    // not go to all grandchilren
     //because that warning message text is inside the child <div>
     //just like xpath "/"  function
 
