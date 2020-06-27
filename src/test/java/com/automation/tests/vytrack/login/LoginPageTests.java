@@ -28,7 +28,16 @@ public class LoginPageTests {
     private By usernameBy = By.id("prependedInput");
     private By passwordBy =By.id("prependedInput2"); //By is a class--> when we find an element by using By.... methods
     ////it returns By data type and we stored it in to By as above statement.
+    // > in css Selector means same thing as / in xpath ,go to direct child
     private By warningMessageBy = By.cssSelector("[class='alert alert-error'] > div");
+    //"[class='alert alert-error'] > div" <<--- this greater sign( >) means go to the child
+    //because that warning message text is inside the child <div>
+    //just like xpath "/"  function
+
+    // you can also right click the warning message text , and select copy --> copy xpath
+    // then use By.xpath("//*[@id=\"login-form\"]/fieldset/div[1]/div"); as below ,also works
+    //private By warningMessageBy = By.xpath("//*[@id=\"login-form\"]/fieldset/div[1]/div");
+
 
     @Test(description = " verify that warning message displays when user enters invalid username")
     public void invalidUsername(){
@@ -70,7 +79,7 @@ public class LoginPageTests {
 
     @BeforeMethod
     public void setup(){
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().window().maximize();

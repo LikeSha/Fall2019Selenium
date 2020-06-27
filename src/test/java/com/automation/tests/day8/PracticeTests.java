@@ -58,7 +58,7 @@ public class PracticeTests {
 
     /**
      * Given user is on the practice landing page
-     * when user navigates to "Forgot password" age
+     * when user navigates to "Forgot password" page
      * then user enters his email
      * and clicks "Retrieve password" button
      * Then user verifies that message " Your e-mail's been sent!" is displayed
@@ -108,7 +108,7 @@ public class PracticeTests {
 
     @BeforeTest
       public void setup(){
-          WebDriverManager.chromedriver().version("79").setup();
+          WebDriverManager.chromedriver().setup();
           // Interview question : HOW TO HANDLE SSL ISSUES IN SELENIUM ? THEN ANSWER IS BELOW  4 LINES
           //ChromeOptions--use to customize browser for tests
         //ChromeOptions chromeOptions = new ChromeOptions();
