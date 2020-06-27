@@ -15,7 +15,11 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class LoginPageTests {
-
+    //why we store the variable private ? in our case its ok if you keep it as public .access modifier
+    //doesn't change anything here in our case here.
+    // We do it private simply because :
+    //its just common practice when you have variables or methods that would not be used outside of this class
+    //the common practice is to keep them as private ,this is Encapsulation
     private WebDriver driver;
     //https is a secured version of http protocol
     //http-its hypertext transfer protocol that every single website is using now days
