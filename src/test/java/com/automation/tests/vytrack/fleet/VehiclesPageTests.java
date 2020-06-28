@@ -103,10 +103,10 @@ public class VehiclesPageTests {
         driver.manage().window().maximize();
 
 
-        // below block of code we copy past from the first test verifyPageSubTitle in order to
+        // below block of code we copy paste from the first test verifyPageSubTitle in order to
         // no repeat right them in our second test , since we put the first block of code
-        //into BeforeMethod , thats why our second test just 3 lines of code
-        //BeforeMethod not only write webdriver, get url...it can be a lot of code.
+        //into BeforeMethod , that's why our second test just 3 lines of code
+        //BeforeMethod not only write WebDriver, get url...it can be a lot of code.
       //-----------------------------------------------------------------------------------
 //        driver.findElement(usernameBy).sendKeys(username);
 //        driver.findElement(passwordBy).sendKeys(password, Keys.ENTER);
