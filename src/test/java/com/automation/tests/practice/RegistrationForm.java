@@ -70,7 +70,7 @@ public class RegistrationForm {
 
     }
      @Test
-     public void verifyFierstNameLengthTest(){
+     public void verifyFirstNameLengthTest(){
         driver.findElement(firstNameBy).sendKeys("a");
         BrowserUtils.wait(3);
          WebElement warningMessage = driver.findElement(By.xpath("//small[text()='first name must be more than 2 and less than 64 characters long']"));
@@ -89,7 +89,8 @@ public class RegistrationForm {
 
     @BeforeMethod
     public void setup(){
-        WebDriverManager.chromedriver().version("79").setup();
+//        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().window().maximize();
