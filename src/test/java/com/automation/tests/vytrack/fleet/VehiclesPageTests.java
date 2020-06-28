@@ -49,6 +49,7 @@ public class VehiclesPageTests {
         //click on fleet
 //        driver.findElement(fleetBy).click();
 
+        // Actions class is used for more advanced browser interactions
         Actions actions = new Actions(driver);
         //move to element instead of click
         actions.moveToElement(driver.findElement(fleetBy)).perform();
