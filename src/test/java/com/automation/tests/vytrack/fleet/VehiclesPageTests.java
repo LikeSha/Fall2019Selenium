@@ -101,6 +101,32 @@ public class VehiclesPageTests {
         driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().window().maximize();
+
+
+        // below block of code we copy past from the first test verifyPageSubTitle in order to
+        // no repeat right them in our second test , since we put the first block of code
+        //into BeforeMethod , thats why our second test just 3 lines of code
+        //BeforeMethod not only write webdriver, get url...it can be a lot of code.
+      //-----------------------------------------------------------------------------------
+//        driver.findElement(usernameBy).sendKeys(username);
+//        driver.findElement(passwordBy).sendKeys(password, Keys.ENTER);
+//
+//
+//
+//        BrowserUtils.wait(5);
+//        //click on fleet
+////        driver.findElement(fleetBy).click();
+//
+//        // Actions class is used for more advanced browser interactions
+//        Actions actions = new Actions(driver);
+//        //move to element instead of click
+//        actions.moveToElement(driver.findElement(fleetBy)).perform();
+//        //perform -- to execute command
+//        //every action should end with perform()
+//        BrowserUtils.wait(2);
+//        //click on Vehicles
+//        driver.findElement(By.linkText("Vehicles")).click();
+//        BrowserUtils.wait(5);
     }
     @AfterMethod
     public void teardown() {
