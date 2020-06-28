@@ -65,6 +65,9 @@ public class LoginPageTests {
 
         String expected = "Dashboard";
         String actual = driver.getTitle();
+        //how can you find title element ( tag) in a page ?
+        //just type <title> in the search bar( ctrl+F)
+        // normally title are under the <head> tag on the top
 
         assertEquals(actual,expected,"Page title is not correct!");
 
