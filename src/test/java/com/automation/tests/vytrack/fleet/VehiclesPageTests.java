@@ -65,7 +65,7 @@ public class VehiclesPageTests {
         WebElement subTitleElement = driver.findElement(subtitleBy);
         System.out.println(subTitleElement.getText());
 
-        String expected = "Cars";
+        String expected = "All Cars";
         String actual = subTitleElement.getText();
 
         Assert.assertEquals(actual,expected);
