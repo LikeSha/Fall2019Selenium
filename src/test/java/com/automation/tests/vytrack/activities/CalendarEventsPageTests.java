@@ -122,6 +122,8 @@ public class CalendarEventsPageTests {
 
         String expectedTime = LocalTime.now(ZoneId.of("GMT-7")).format(DateTimeFormatter.ofPattern("h:m a"));
         String actualTime = driver.findElement(startTimeBy).getAttribute("value");
+        //input box they don't have text ,they have value ,that'ss why to this case
+        //we again use .getAttribute("value") to get the content(text) of current time
 
         Assert.assertEquals(actualTime, expectedTime);
     }
