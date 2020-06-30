@@ -27,7 +27,11 @@ public class CallsPageTests {
         driver = DriverFactory.createDriver("chrome");
         driver.get("https://qa2.vytrack.com/user/login");
         driver.manage().window().maximize();
-        actions = new Actions(driver);
+        actions = new Actions(driver);// without driver ,you can not use
+        //actions class ,so you need to create driver first :
+        //driver = DriverFactory.createDriver("chrome");
+        //then you put "driver" object into action class constructor to
+        //create an action object ,just like this:actions = new Actions(driver);
 
         BrowserUtils.wait(3);
         driver.findElement(usernameBy).sendKeys(storeManagerUserName);
