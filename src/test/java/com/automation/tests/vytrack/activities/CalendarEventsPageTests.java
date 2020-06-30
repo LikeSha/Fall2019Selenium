@@ -104,6 +104,11 @@ public class CalendarEventsPageTests {
 //        Default title should be blank
         WebElement titleElement = driver.findElement(titleBy);
         Assert.assertTrue(titleElement.getAttribute("value").isEmpty());
+        //input elements don't contain a text. Instead text is inside attribute "value"
+        //Use getAttribute() method to retrieve that value
+        //text that you enter into input box will be stored inside "value" attribute. So getText()
+        //method will not give you anything.Instead,use getAttribute("value')
+
         //date time syntax = https://www.journaldev.com/17899/java-simpledateformat-java-date-format
 
         //Default start date should be current date
