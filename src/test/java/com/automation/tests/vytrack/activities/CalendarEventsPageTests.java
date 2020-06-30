@@ -44,6 +44,9 @@ public class CalendarEventsPageTests {
     private By titleBy = By.cssSelector("[name='oro_calendar_event_form[title]']");
     private By startDateBy = By.cssSelector("[id*='date_selector_oro_calendar_event_form_start-uid']");
     private By startTimeBy = By.cssSelector("[id*='time_selector_oro_calendar_event_form_start-uid']");
+    //for some reason, end-part of id is always different, That's why we use contains * to partially
+    //match id. * is cssSelector method.it calls contains.we selected static part of id and provided
+    //into locator
 
 
     @BeforeMethod
