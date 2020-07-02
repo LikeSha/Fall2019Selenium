@@ -28,6 +28,12 @@ public class ActionsTests {
        driver.manage().window().maximize();
         BrowserUtils.wait(3);
 
+        // to select image , if they have 3 images, when we inspect ,we input this
+        // in the search bar : (//img)[1] , this is exclusively pointing at image 1
+        // its just like array first item, pay attention to the parathesis surrounding
+        //  //img   then following [], then input the number of image you want to select
+        //   double forward slash " //" means the method you are using is xpath
+
         WebElement img1 = driver.findElement(By.xpath("(//img)[1]"));
         WebElement img2 = driver.findElement(By.xpath("(//img)[2]"));
         WebElement img3 = driver.findElement(By.xpath("(//img)[3]"));
@@ -46,6 +52,7 @@ public class ActionsTests {
         //hover over image to make text visible
         actions.moveToElement(img1).perform();
         WebElement imgText1 = driver.findElement(By.xpath("//h5[text()='name: user1']"));
+        // (//h5)[1]<-- can also use this element to find out image1 text
         //verify that webelement that contains the text is visible
         Assert.assertTrue(imgText1.isDisplayed());
 
