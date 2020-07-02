@@ -20,7 +20,7 @@ public class JSExecutor {
     @BeforeMethod
     public void setup(){
        // driver = DriverFactory.createDriver("chrome");
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
     }
@@ -38,7 +38,7 @@ public class JSExecutor {
  //         you need to cast if reference type is a WebDriver
 //            JavascriptExecutor js = (JavascriptExecutor) driver;
             //scroll down 250 pixels
-            // x,y offest
+            // x,y offset
             for(int i= 0; i<10; i++){
                 driver.executeScript("window.scrollBy(0,250)");
                 BrowserUtils.wait(1);
@@ -56,6 +56,10 @@ public class JSExecutor {
             WebElement link = driver.findElement(By.linkText("Cybertek School"));
             //scrollIntoView ---javascript method
             //arguments[0]--means 1st webelement after comma
+            //in this case arguments[0] is reffering to link, because link is the first element
+            // after comma, the comma is this script ( piece of code) comma :
+            //  "arguments[0].scrollIntoView(true)",link); not means
+            //website comma !
             driver.executeScript("arguments[0].scrollIntoView(true)",link);
         }
 
