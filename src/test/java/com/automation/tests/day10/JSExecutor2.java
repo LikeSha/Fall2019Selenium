@@ -27,10 +27,10 @@ public class JSExecutor2 {
         String expected = "Practice";
         //we create javascriptexecutor object by casting webdriver object
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        //executeScript ---this method exectues javascript code
+        //executeScript ---this method executes javascript code
         //we provide js code as a String
         //return document.title--javascript code
-        //document ---represnets HTML page
+        //document ---represents HTML page
         //.toString()--to avoid additional casting from Object to String
         String actual = (String) js.executeScript("return document.title").toString();
 
@@ -52,10 +52,12 @@ public class JSExecutor2 {
         //WebElement arguments - {element,link, link2)
         //from left --to right
         js.executeScript("arguments[0].click()",link);
+        //arguments[0].click()",link  0 because its a first webelement after comma
 
         WebElement button6 = driver.findElement(By.id("disappearing_button"));
 
         js.executeScript("arguments[0].click()",button6);
+        //arguments[0].click()",link  0 because its a first webelement after comma
 
         BrowserUtils.wait(2);
 
