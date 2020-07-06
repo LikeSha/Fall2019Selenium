@@ -5,6 +5,8 @@ import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +22,9 @@ public class WebTables {
     @BeforeMethod
     public void setup(){
         driver = DriverFactory.createDriver("chrome");
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setHeadless(true);//to run browser without GUI
+//        driver= new ChromeDriver(chromeOptions);
         driver.get("http://practice.cybertekschool.com/tables");
         driver.manage().window().maximize();
         BrowserUtils.wait(3);
