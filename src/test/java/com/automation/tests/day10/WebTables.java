@@ -23,7 +23,7 @@ public class WebTables {
     public void setup(){
         driver = DriverFactory.createDriver("chrome");
 //        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.setHeadless(true);//to run browser without GUI
+//        chromeOptions.setHeadless(true);//to run browser without GUI . Makes browser invisible.
 //        driver= new ChromeDriver(chromeOptions);
         driver.get("http://practice.cybertekschool.com/tables");
         driver.manage().window().maximize();
