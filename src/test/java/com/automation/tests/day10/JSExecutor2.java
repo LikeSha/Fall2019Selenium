@@ -67,7 +67,7 @@ public class JSExecutor2 {
     }
 
     @Test
-    public void textInputText(){
+    public void textInputTest(){
             driver.findElement(By.linkText("Form Authentication")).click();
             BrowserUtils.wait(3);
 
@@ -87,6 +87,9 @@ public class JSExecutor2 {
 
         String expected = "Welcome to the Secure Area. When you are done click logout below.";
         String subheader = js.executeScript("return document.getElementsByClassName('subheader')[0].textContent").toString();
+
+        Assert.assertEquals(subheader,expected);
+
     }
 
     @Test
