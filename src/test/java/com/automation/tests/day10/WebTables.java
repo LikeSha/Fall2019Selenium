@@ -78,6 +78,9 @@ public class WebTables {
     public void deleteRowTest(){
 
           String xpath = "//table[1]//td[text()='jsmith@gmail.com']/..//a[text()='delete']";
+          // /..//a[text()='delete']";  the /.. means go back to parent
+          //or do this way ://table[1]//td[text()='jdoe@hotmail.com']/following-sibling::td/a[text()='delete']
+          // or do this : //table[1]//td[text()='jdoe@hotmail.com']/..//a[2]<--second link is delete ,first is edit
           driver.findElement(By.xpath(xpath)).click();
           BrowserUtils.wait(3);
           //get count of rows
