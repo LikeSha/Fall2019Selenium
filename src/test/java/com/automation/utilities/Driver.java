@@ -25,9 +25,9 @@ public class Driver {
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--start-maximized");
-                    driver = new ChromeDriver(chromeOptions);
+//                    ChromeOptions chromeOptions = new ChromeOptions();
+//                    chromeOptions.addArguments("--start-maximized");
+                    driver = new ChromeDriver();//driver = new ChromeDriver(ChromeOptions);
                     break;
                 case "chromeheadless":
                     //to run chrome without interface (headless mode)
