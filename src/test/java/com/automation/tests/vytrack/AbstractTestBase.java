@@ -16,7 +16,8 @@ import org.testng.annotations.*;
 import java.io.IOException;
 
 public abstract class AbstractTestBase {
-    //will be visible in the subclass , regardless on subclass location(same package or no)
+    //We use protected access modifier is because :
+    // will be visible in the subclass , regardless on subclass location(same package or no)
     protected WebDriverWait wait;
     protected Actions actions;
 
