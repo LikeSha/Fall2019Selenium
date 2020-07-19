@@ -58,7 +58,7 @@ public abstract class AbstractPageBase {
 
         Actions actions = new Actions(driver);
 
-        BrowserUtils.wait(4);
+        BrowserUtils.wait(20);
 
         actions.moveToElement(tabElement).
                 pause(2000).
@@ -66,7 +66,7 @@ public abstract class AbstractPageBase {
                 build().perform();
 
         //increase this wait rime if still failing
-        BrowserUtils.wait(4);
+        BrowserUtils.wait(20);
     }
 
 
