@@ -13,7 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * This class will be extended by page classes
- * Any common webelements/locators can be stored here
+ * Any common webelements/locators can be stored here , in vytrack case ,those common webelements/locators
+ * are on the top of "FLEET MANAGEMENT" PAGE, " Dashboards, Fleet Customers Sales Activities Marketing Report..
  * Since navigation menu doesn't belong to particular page
  * We cannot really create a dedicated page class to store
  * elements from that menu
