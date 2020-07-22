@@ -41,7 +41,7 @@ public class NewCalendarEventsTests extends AbstractTestBase {
         //in CalendarEventsPage method.
 
         String actualStartDate = calendarEventsPage.getStartDate();
-        String expectedStartDate = DateTimeUtilities.getCurrentDate("MMM d, yyyy");
+        String expectedStartDate = DateTimeUtilities.getCurrentDate("MMM dd, yyyy");
 
         Assert.assertEquals(actualStartDate, expectedStartDate);
 
