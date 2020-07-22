@@ -9,13 +9,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
+// object repository -- page package--> where is your page classes -->
+// from page classes you create page objects.
 
 public class CalendarEventsPage extends AbstractPageBase {
 
     @FindBy(css = "[title='Create Calendar event']")
     private WebElement createCalendarEvent;
 
-    @FindBy(className = "select2-chosen")
+    @FindBy(className = "select2-chosen") // in inspect area ctrl+F we input: .select2-chosen ,this is css selector
     private WebElement owner;
 
     @FindBy(css = "[id^='date_selector_oro_calendar_event_form_start']")
@@ -110,6 +112,10 @@ public class CalendarEventsPage extends AbstractPageBase {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("select2-chosen")));
         wait.until(ExpectedConditions.visibilityOf(owner));
         return owner.getText().trim();
+        //why we put current user element under base page class but owner element under create calendar event
+        //page class?  because: "current owner" element belongs to top menu! Top menu , navigation menu
+        //doesn't belong to particular page.Since top menu elements are shared, we can store them
+        //into the base page class.
     }
 
     public void clickToCreateCalendarEvent(){
