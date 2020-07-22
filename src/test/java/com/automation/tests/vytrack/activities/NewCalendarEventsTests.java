@@ -24,6 +24,12 @@ public class NewCalendarEventsTests extends AbstractTestBase {
      * Click on Create Calendar Event
      * Default owner name should be current user/
      **/
+
+    /**
+     * If you wanna interact with any page ( test any page) you need to create page object !
+     * that means : if you wanna interact with login page ,you need to first create login page object
+     * if you want to interact with calendarEventsPage, you need to create calenderEventPage object !
+     */
     @Test
     public void defaultOptionsTest() {
         loginPage.login();
@@ -31,6 +37,9 @@ public class NewCalendarEventsTests extends AbstractTestBase {
         calendarEventsPage.clickToCreateCalendarEvent();
 
         Assert.assertEquals(calendarEventsPage.getOwnerName(), calendarEventsPage.getCurrentUserName());
+        //calendarEventsPage.getCurrentUserName() this method is coming from AbstractPageBase. the code
+        //is in there, because CalendarEventsPage extends AbstractPageBase, thats why we can use it
+        //in CalendarEventsPage method.
 
         String actualStartDate = calendarEventsPage.getStartDate();
         String expectedStartDate = DateTimeUtilities.getCurrentDate("MMM d, yyyy");
