@@ -63,6 +63,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://extentreports.com/docs/versions/4/java -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
