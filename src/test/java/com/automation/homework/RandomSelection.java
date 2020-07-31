@@ -34,13 +34,17 @@ public class RandomSelection {
             Random random = new Random();
             int checkboxToSelect = random.nextInt(checkboxes.size()-1);
 
-            checkboxes.get(checkboxToSelect).click();
-            System.out.println("Selected :: " + labels.get(checkboxToSelect).getText());
+            if (checkboxes.get(checkboxToSelect).isEnabled()){
+                checkboxes.get(checkboxToSelect).click();
+                System.out.println("Selected :: " + labels.get(checkboxToSelect).getText());
 
-            checkboxes.get(checkboxToSelect).click();
+                checkboxes.get(checkboxToSelect).click();
 
-            if(labels.get(checkboxToSelect).getText().equals("Friday")){
-                counter++;
+                if(labels.get(checkboxToSelect).getText().equals("Friday")){
+                    counter++;
+            }
+
+
             }
         }
 
