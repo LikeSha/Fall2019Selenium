@@ -59,7 +59,11 @@ public class NewLoginTests extends AbstractTestBase {
         Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
         test.pass("Page title Dashboard was verified");
     }
-
+    //Object[][] or Object[] or Iterator<Object[]>
+    //Object[]----1 column with a data
+    //Object[][] 2+
+    //now line 52 and below the block of codes connected to your dataprovider (line 66 to73)
+    //DataProvider is coming from testNG ,NOT FROM REPORT.
     @DataProvider
     public Object[][] credentials() {
         return new Object[][]{
