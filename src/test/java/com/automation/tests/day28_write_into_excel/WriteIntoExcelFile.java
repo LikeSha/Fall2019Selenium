@@ -20,6 +20,10 @@ public class WriteIntoExcelFile {
         Sheet sheet= workbook.getSheet("QA3-short");
         Row row = sheet.getRow(1);//second row
         Cell cell = row.getCell(5);//create new cell
+//        Row row = sheet.getRow(0);// first row
+//        Cell cell = row.getCell(row.getLastCellNum()-1); this line of code is
+//          getting physical number of cell
+//        System.out.println(cell.getStringCellValue());
 
         System.out.println("Before : " + cell.getStringCellValue());
         cell.setCellValue("PASSED");//I am changing from n/a to passed
@@ -27,12 +31,14 @@ public class WriteIntoExcelFile {
 
         Row firstRow = sheet.getRow(0);//get first row
         Cell newCell = firstRow.createCell(6);//CREATE NEW CELL
+//        Cell newCell = firstRow.createCell(row.getLastCellNum());
         newCell.setCellValue("Date of execution");//give the name to this cell
 
         //write date and time info into second row, last column
 
         Row secondRow = sheet.getRow(1);
         Cell newCell2 = secondRow.createCell(6);
+//        Cell newCell2 = secondRow.createCell(row.getLastCellNum());
         newCell2.setCellValue(LocalDate.now().toString());//I will set current date and time info into new cell
         //newCell2.setCellValue(DateTimeUtilities.getCurrentDate("MMM d, yyyy"));
 
