@@ -14,8 +14,8 @@ public class ReadDataFromExcel {
     @Test
     public void readExcelFileTest() throws IOException {
         //we need to get a file as an object
-        File file = new File("VytrackTestUsers.xlsx");
-        //object that represents excel file
+        File file = new File("VytrackTestUsers.xlsx");// this File can be any file, its generic
+        //object that represents excel file  //Workbook workbook is specific for excel object.Its coming from apache.poi
         Workbook workbook = WorkbookFactory.create(file);
         //get QA1-short
         Sheet workSheet = workbook.getSheet("QA1-short");
@@ -40,7 +40,7 @@ public class ReadDataFromExcel {
 
         // last row is 16the--->index is 15
         //index of last row
-        int numberOfRows = workSheet.getLastRowNum();
+        int numberOfRows = workSheet.getLastRowNum(); // rows start with 0
         //returns how many rows at all
         int numberOfRows2 = workSheet.getPhysicalNumberOfRows();
 
@@ -49,6 +49,8 @@ public class ReadDataFromExcel {
         System.out.println("number Of Rows = " + numberOfRows2);
 
         System.out.println("#############################");
+
+        // cell is just like column
 
         for (int row = 0; row < workSheet.getPhysicalNumberOfRows(); row++) {
             for (int cell = 0; cell < workSheet.getRow(row).getLastCellNum(); cell++) {
