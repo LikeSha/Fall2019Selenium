@@ -19,6 +19,11 @@ public class RadioButtonsTest {
         BrowserUtils.wait(2);
         // <input type="radio" id="black" name="color">
         WebElement blackButton = driver.findElement(By.id("black"));
+        // if we want to find yellow button ,we can use xPath  to do it :
+        // //label[text()='Yellow']/preceding-sibling::input
+
+        // if we want to find Green button,which is "disabled" ,we use xpath :
+        // //label[contains(text(),'Green')].preceding-sibling::input
 
         //if visible and eligible to click  visible and eligible are two different things
         if(blackButton.isDisplayed() && blackButton.isEnabled()){
