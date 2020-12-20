@@ -88,7 +88,12 @@ public class March4_2020 {
         driver.quit();
     }
 
+      /*
+      StaleElementReferenceException : stale element reference : element is not attachec to the page document
 
+       StaleElementReferenceException-means that selenium cannot find previously located element.
+       It happens when you are trying to interact with element after page refresh or navigation
+       */
 
 
 
