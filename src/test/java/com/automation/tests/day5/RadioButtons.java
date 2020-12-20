@@ -27,6 +27,7 @@ public class RadioButtons{
         //classes were involved this issue.
         //<input type="radio">
         List<WebElement> radioButtons = driver.findElements(By.tagName("input"));
+        // List<WebElement> radioButtons = driver.findElements(By.cssSelector("input[type='radio']"));
 
 
         for(WebElement radioButton: radioButtons){
