@@ -19,6 +19,23 @@ public class CheckBoxes {
         BrowserUtils.wait(5);
         //<input type="checkbox" checked="">
         List<WebElement> checkBoxes = driver.findElements(By.tagName("input"));
+        // use cssSelector :   List<WebElement> checkBoxes = driver.findElements(By.cssSelector("input[type='checkbox']"));
+        // use xpath :   List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
+
+        /*
+        using for each loop to loop each and every checkbox :
+
+        for(WebElement checkbox : checkboxes){
+            Thread.sleep(2000); ( dong forget put throws Exception after main method)
+            if(!checkbox.isSelected()){
+               checkbox.click();
+            }
+
+
+
+        }
+        driver.quit();
+         */
 
 //        checkBoxes.get(0).click(); // click on first checkbox
 
