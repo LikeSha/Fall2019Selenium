@@ -53,6 +53,52 @@ public class Driver {
             driver = null;
         }
     }
+    /*
+    public class Driver{ // for parellel testing driver class
+
+        private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+
+        private Driver(){
+
+        }
+
+        public static WebDriver getDriver(String browser){
+
+             if(driverThreadLocal.get() == null){
+                 switch (browser) {
+                     case "chrome":
+                        WebDriverManager.chromedriver().setup();
+                        driverThreadLocal.set(new ChromeDriver());
+                        break;
+                      case "firefox":
+                         WebDriverManager.firefoxdriver().setup();
+                         driverThreadLocal.set(new FirefoxDriver());
+                         break;
+                      default:
+                         throw new RuntimeException("Unimplemented driver type!");
+
+
+                 }
+
+
+
+             }
+
+             return driverThreadLocal.get();
+
+
+        }
+
+        public void closeDriver(0{
+            if(driverThreadLocal.get() ! =null){
+               driverThreadLocal.get().quit();
+               driverThreadLocal.remove();
+            }
+        }
+
+
+    }
+     */
 
 
 }
