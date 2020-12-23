@@ -59,7 +59,8 @@ public class JSExecutor {
             //in this case arguments[0] is reffering to link, because link is the first element
             // after comma, the comma is this script ( piece of code) comma :
             //  "arguments[0].scrollIntoView(true)",link); not means
-            //website comma !
+            //website comma ! it the comma inside this syntax : "arguments[0].scrollIntoView(true)",link
+            // as we can see ,it is the comma before the word " link" and after (true)  (true),link
             driver.executeScript("arguments[0].scrollIntoView(true)",link);
         }
 
