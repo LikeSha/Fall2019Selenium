@@ -62,7 +62,7 @@ public class Driver {
 
         }
 
-        public static WebDriver getDriver(String browser){
+        public synchronized static WebDriver getDriver(String browser){
 
              if(driverThreadLocal.get() == null){
                  switch (browser) {
