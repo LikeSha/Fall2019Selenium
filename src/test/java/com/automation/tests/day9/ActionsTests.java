@@ -66,6 +66,15 @@ public class ActionsTests {
 
     }
 
+    /*
+     to hover over each and every image , we use for each loop :
+
+     List<WebElement> images = driver.findElements(By.tagName("img"));
+
+       for(WebElement image : images){
+           actions.moveToElement(image).pause(2000).perform();
+     */
+
     @Test
     public void jqueryMenuTest(){
         //Task until 8:20
