@@ -89,7 +89,7 @@ public class Driver {
 
         }
 
-        public static void closeDriver(){
+        public synchronized static void closeDriver(){
             if(driverThreadLocal.get() ! =null){
                driverThreadLocal.get().quit();
                driverThreadLocal.remove();
