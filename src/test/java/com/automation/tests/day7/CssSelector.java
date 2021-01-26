@@ -17,6 +17,7 @@ public class CssSelector {
         WebElement btn1 = driver.findElement(By.cssSelector("[onclick='button1()']"));
         WebElement btn2 = driver.findElement(By.cssSelector("[name='button2']"));
         WebElement btn3 = driver.findElement(By.cssSelector("[id^='button_']"));
+        //id^ means : starts-with  if use xpath : //button[starts-with(@id,'button_')]
         WebElement btn4 = driver.findElement(By.cssSelector("[onclick='button4()']"));
         WebElement btn5 = driver.findElement(By.cssSelector("[onclick='button5()']"));
         WebElement btn6 = driver.findElement(By.cssSelector("#disappearing_button"));
