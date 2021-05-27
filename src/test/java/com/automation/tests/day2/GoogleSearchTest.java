@@ -31,6 +31,7 @@ public class GoogleSearchTest {
         //visible text of this link, can be used by selenium to find this element
         WebElement news = driver.findElement(By.linkText("News"));
         news.click();// to click on the element
+        //Thread.sleep() -- is used to pause java program
         Thread.sleep(4000);
         driver.quit();
 
