@@ -42,7 +42,7 @@ public class FindElementsTest { // this topic is interview question StaleElement
              * --if it occurs, you need to find element again
              *
              *  try{
-             *  //if it generaets exception once in a while
+             *  //if it generates exception once in a while
              *  //put it into try/catch and try to find element one more time
              *  driver.findElement(By.id("name")).click()
              *
