@@ -6,6 +6,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
+
 public class March4_2020 {
 
     static WebDriver driver;
@@ -29,6 +31,9 @@ public class March4_2020 {
         driver.findElement(By.id("gh-btn")).click();
         WebElement searchResults = driver.findElement(By.tagName("h1"));
         System.out.println(searchResults.getText().split(" ")[0]);
+//        String[] searchSentence = searchResults.getText().split(" ");
+//        System.out.println(Arrays.toString(searchSentence));
+//        System.out.println(searchSentence[0]);
         driver.quit();
     }
 
