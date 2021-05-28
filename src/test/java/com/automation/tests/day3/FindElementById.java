@@ -46,7 +46,7 @@ public class FindElementById {
         // then if we want to find out if this element is unique, we can only use css selector
         //to check it in the search box , we do this in search box : [class="subheader"]
         // pay attention : must have square bracket when using css selector. we simply put
-        // attribure= value pair inside square bracket []
+        // attribute= value pair inside square bracket []
 
         if(expected.equals(actual)){
             System.out.println("TEST PASSED");
