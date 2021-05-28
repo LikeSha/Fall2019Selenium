@@ -37,6 +37,15 @@ public class FindElementById {
         String expected = "Welcome to the Secure Area. When you are done click logout below.";
         String actual = driver.findElement(By.tagName("h4")).getText();
         // you must put getText() method , so that it will return a String .
+        // in this case ,find element using h4, h4 is a tag name, so if we want to check
+        //if h4 is a unique element ,just input "h4" or " //h4" in the search box ( search box
+        // appear when we use keyboard " ctrl + f " , search box is helping us to find
+        //if the element is unique.
+
+        // if the element is a combination of attribute + value format, for example : class="subheader"
+        // then if we want to find out if this element is unique, we can only use css selector
+        //to check it in the search box , we do this in search box : [class="subheader"]
+        // pay attention : must have square braket when using css selector.
 
         if(expected.equals(actual)){
             System.out.println("TEST PASSED");
