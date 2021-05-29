@@ -22,7 +22,7 @@ public class RadioButtons{
         // printStackTrace(); method in utilities package ,
         // and this method will show whole class of thread
         // that involved, it shows you from beginning to the end where
-        // errors and exceptions occured. this print called " StackTrack();
+        // errors and exceptions occured. this print called " StackTrace();
         //its a history of what entire exceptions occured and what
         //classes were involved this issue.
         //<input type="radio">
