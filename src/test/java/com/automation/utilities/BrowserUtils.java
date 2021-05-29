@@ -27,7 +27,8 @@ public class BrowserUtils {
         try {
             Thread.sleep(1000 * seconds);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            e.printStackTrace();// printStackTrace() method tells us where exactly happened the exception
+            // without this piece of code, when exceptions happened ,we don't know where is mistake.
         }
     }
 
