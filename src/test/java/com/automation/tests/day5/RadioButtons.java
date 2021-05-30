@@ -71,7 +71,9 @@ Today is March 7, 2020
         frames
 
 
-        until we start testNG, we will develop test methods, then -----> we move onto unit testing frameworks,and we will develop independent test method for our test case , then ----> we will move to main method concept
+        until we start testNG, we will develop test methods, then ----->
+        we move onto unit testing frameworks,and we will develop independent test method for our test case ,
+        then ----> we will move to main method concept
 
 ##################################
 
@@ -79,7 +81,9 @@ WebElement element        = findElement
 List<WebElement> elements = findElements
 
 <input type="radio" >
-Exception in thread "main" org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()? -- make sure that you don't use webdriver object after quit() method, it should be at the end of your test script.
+Exception in thread "main" org.openqa.selenium.NoSuchSessionException: Session ID is null.
+Using WebDriver after calling quit()? -- make sure that you don't use webdriver object after quit() method,
+it should be at the end of your test script.
 
 .isEnabled()   - returns true, if button can be clicked, otherwise - false.
 .isSelected()  - returns true, if button already clicked, otherwise - false.
@@ -98,7 +102,8 @@ driver.findElements(By.by()).size() == 0;
 
  getText() ---> nothing
 
- <tag>Text</tag> // any text should be in between opening tag and closing tag ,in this case ( radio button case . no text , only attribute)
+ <tag>Text</tag> // any text should be in between opening tag and closing tag ,
+ in this case ( radio button case . no text , only attribute)
 
 Priority:
 1. element must be present
