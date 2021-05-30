@@ -45,3 +45,20 @@ public class NestedFrame {
 
     }
 }
+/*
+List<List<String>> -- nested frame
+
+Windows:
+
+First, go to the folder that contains the file you're interested in.
+The easiest way of copying a file path is to hold down the Shift key on your keyboard
+and then right-click on the file. (That displays extra functionality in the context menu).
+Then, choose "Copy as path" from the menu. This trick will also work on folders,
+if you want to copy the folder path. Even if the path doesn't contain any spaces,
+Windows will still automatically surround it with double-quotes.
+
+Mac:
+Right click on the file --> press and hold option button --> copy as a path name
+To upload file in Selenium: you need to use sendKeys() method and provide path to the file.
+
+ */
