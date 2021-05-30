@@ -47,3 +47,19 @@ public class RegistrationForm {
         driver.quit();
     }
 }
+
+/*
+ Summary of today's topic :
+
+ isDisplayed() --- to check if element is visible
+returns false if element in the DOM, but hidden.
+isEnabled()   --- to check if element is intractable (if you can do something with this element)
+isSelected()  --- returns true, if radio button or check box is already clicked
+frames - to insert another HTML document. Content inside a frame is not visible for selenium by default,
+that's why you have to switch:
+driver.switchTo().frame()
+you can switch based on id/name, index, WebElement.
+driver.switchTo().parentFrame() - if you are inside a child frame, switch to parent
+driver.switchTo().defaultContent() - exit from all frames to original document.
+to upload file, just use sendKeys() method and specify path to the file from your computer.
+ */
