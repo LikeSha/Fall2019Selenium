@@ -60,7 +60,51 @@ public class RadioButtons{
         }
 
 
+/*
+Today is March 7, 2020
+    Agenda:
+        radio buttons
+        check boxes
+        -- isDisplayed()
+        -- isSelected()
+        -- isEnabled()
+        frames
 
+
+        until we start testNG, we will develop test methods, then -----> we move onto unit testing frameworks,and we will develop independent test method for our test case , then ----> we will move to main method concept
+
+##################################
+
+WebElement element        = findElement
+List<WebElement> elements = findElements
+
+<input type="radio" >
+Exception in thread "main" org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()? -- make sure that you don't use webdriver object after quit() method, it should be at the end of your test script.
+
+.isEnabled()   - returns true, if button can be clicked, otherwise - false.
+.isSelected()  - returns true, if button already clicked, otherwise - false.
+.isDisplayed() - returns true, if element is visible. Applies to any kind of webelement, not only radio buttons.
+
+NOTE: if element doesn't exists at all, you will get - NoSuchElementException.
+This method will not work if element doesn't present in the HTML code.
+
+To verify if element is not in HTML code at all, use findElements().size() == 0.
+driver.findElements(By.by()).size() == 0;
+
+<input type="radio" id="red" name="color">
+ radioButton.getAttribute("id");    --> red
+ radioButton.getAttribute("type");  --> radio
+ radioButton.getAttribute("name");  --> color
+
+ getText() ---> nothing
+
+ <tag>Text</tag> // any text should be in between opening tag and closing tag ,in this case ( radio button case . no text , only attribute)
+
+Priority:
+1. element must be present
+2. element must be visible
+3. element must be enabled
+ */
 
 
 

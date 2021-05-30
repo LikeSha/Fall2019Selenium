@@ -59,3 +59,15 @@ public class CheckBoxes {
 
     }
 
+/*
+checkboxes note : if we see 2 checkboxes, first we need to find out if checkbox unique in the html page,
+how to check out if it is unique one ? (ctrl+f)--> we type cssSelector syntax : input[type='checkbox'],
+and the page shows there are 1 of 2, means there are 2 checkboxes using same attribute " type ",
+suppose we need to select the first one , the path would be like this :
+
+input[type='checkbox']:nth-oftype(1) ---> and we use this path write our code in IntelliJ,
+for example, we can write :
+driver.findElement(By.cssSelector("input[type='checkbox']:nth-oftype(1)")).click();
+
+
+ */
