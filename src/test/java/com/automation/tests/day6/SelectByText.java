@@ -53,6 +53,8 @@ public class SelectByText {
         Select stateSelect = new Select(driver.findElement(By.id("state")));
         stateSelect.selectByVisibleText("District Of Columbia");
         // option that is currently selected
+        //getFirstSelectedOption() this method to use for verify that we selected what we already did.
+        //in this case ,we selected District Of Columbia, now we need to verify we selected right thing.
         //getFirstSelectedOption()--returns a webelement thats why we need to call getText()
         //getText() retrieves visible text from the webelement
         String selected = stateSelect.getFirstSelectedOption().getText();
