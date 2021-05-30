@@ -20,7 +20,7 @@ public class SelectByText {
         WebElement simpleDropdown = driver.findElement(By.id("dropdown"));
         //provide webelement object into constructor
         Select selectSimpleDropdown = new Select(simpleDropdown);
-        selectSimpleDropdown.selectByVisibleText(("Option 2"));
+        selectSimpleDropdown.selectByVisibleText(("Option 2"));// select by visible text
         BrowserUtils.wait(3);
         //and select option 1
         selectSimpleDropdown.selectByVisibleText("Option 1");
@@ -73,7 +73,20 @@ public class SelectByText {
         driver.quit();
 
 
+/*
+From the selenium perspective, there are 2 types of drop-downs: select and other.
 
+To handle select drop-downs, use Select class from selenium. You can select by:
+- text
+- value (<option value="smth">)
+- index
+
+In case of any other drop-down, just click on,wait until options becomes visible and click on that option.
+You need a locator for dropdown and option.
+
+to determine which is select drop-down which is not ,just observe inspection ,
+if there is tag" select" in beginning , this is select drop-down
+ */
 
 
 
