@@ -74,7 +74,7 @@ public class Alerts {
         BrowserUtils.wait(3);
         Alert alert = driver.switchTo().alert();
 
-        alert.sendKeys("Hello,World!");
+        alert.sendKeys("Hello,World!");//enter text
         alert.accept();//click ok
 
         String expected3 = "You entered: Hello,World!";
