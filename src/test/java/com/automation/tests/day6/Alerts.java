@@ -103,6 +103,7 @@ driver.switchTo().alert().getText();--get the text of the alert window.
 driver.switchTo().alert().accept();-- tell browser to click "ok" on popup window
 driver.switchTo().alert().dismiss();-- tell browser to click" cancel" on popup window
 driver.switchTo().alert().sendKeys("cyberteck");-- write message on the popup window, then after input message
-,you need to click "ok" , use this command : alert.accept();
+,you need to click "ok" , use this command : alert.accept();  then pay attention here : when you do
+comparason of expected and actual result , teacher used " endsWith() method.
 
  */
