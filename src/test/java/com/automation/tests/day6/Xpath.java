@@ -60,6 +60,16 @@ Xpath - the most powerful locator. There are 2 xpath's: absolute and relative
 absolute starts with / and root element, for example: /html/body/div/
 relative starts with // and any element, like //button or //input
 
+Xpath syntax : //tagName[@attribute = 'value']
+//----beginning of element.
+tagName -- tag name of element
+@ --select attribute
+Attribute --Attribute name of the element
+Value--Value of the attribute
+
+ */
+ /*
+
 Example of absolute:
 
 /html/body/div/div[2]/div/div/button[2]
