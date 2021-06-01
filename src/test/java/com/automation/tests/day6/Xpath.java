@@ -132,6 +132,11 @@ indexes starts with 1 in xpath
 
 //button[contains(text(),'5')] - find a button, that contains 5 in the text
 
+tip : if you don't know how to find xpath at work, you may try to use google help you :
+right click on the element locator, then click Copy--> click " copy xpath " ( this is relative xpath )
+or right click on the element locator ,then click Copy--> cick " copy full XPath ( this is absolute xpath)
+NEVER USE ABSOLUTE XPATH WHEN AUTOMATION.
+
  */
 
 
