@@ -67,6 +67,9 @@ tagName -- tag name of element
 Attribute --Attribute name of the element
 Value--Value of the attribute
 
+if you want to find element by text :
+//button[text()='Click for JS Prompt']
+
  */
  /*
 
