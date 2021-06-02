@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Xpath {
-
+      // You can not create static variable inside main method ,because static belong to class
+    // so you can only create static variable inside the class ( filed ) ( filed is the space between
+    // class and main method
       public static String userNameLocator = "//label[text()='Username']/following-sibling::input";
       public static String passwordLocator = "//label[text()='Password']/following-sibling::input";
       public static String loginBtnLocator = "//button[contains(text(), 'Login')]";
