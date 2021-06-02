@@ -190,7 +190,10 @@ We use tags and attributes to come up with a locator.
          #8 CSS Selector
 
 CSS (Cascading Style Sheets ) is a language that describes the style of an HTML document.
-CSS describes how HTML elements should be displayed. Like the name implies it is a locator strategy by css. Native browser support is used by default, so please refer to w3c css selectors for a list of generally available css selectors. Beware that not all browsers were created equal, some css that might work in one version may not work in another.
+CSS describes how HTML elements should be displayed. Like the name implies it is a locator strategy by css.
+Native browser support is used by default, so please refer to w3c css selectors for
+a list of generally available css selectors. Beware that not all browsers were created equal,
+some css that might work in one version may not work in another.
  */
 /*
 Example of to find the cheese below:
