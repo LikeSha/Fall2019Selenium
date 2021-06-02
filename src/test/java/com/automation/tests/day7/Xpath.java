@@ -83,7 +83,7 @@ We use tags and attributes to come up with a locator.
     #7 xpath - xml path
 
        xml - it's document that looks like HTML,also based on tags.
-       there are 2 tyes of xpath : relative and absolute
+       there are 2 types of xpath : relative and absolute
 
        absolute , usually not used in test automation, for finding locators. In rear cases when it's useful :
        when you expect some elements in the specific place. You need to start from the root element. In case of HTML it's a -<html>
