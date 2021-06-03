@@ -44,7 +44,9 @@ public class BasicTestNGTests {
         System.out.println("AFTER METHOD");
     }
 
-
+// all @Test method NO NEED TO MAKE THEM STATIC! because ,the purpose to make method static is : we can
+    // call those static methods out side of class, but the test method , we only run inside current class
+    // so there is no point to make test method " static "
     @Test
     public void test1(){
         System.out.println("TEST 1");
