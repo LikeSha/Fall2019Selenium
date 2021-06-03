@@ -86,6 +86,7 @@ public class SearchTests {
         //that's why, instead of collection all h2 elements
         //we collected all hyperlinks
         //every hyperlink represent some search item
+        // in most cases,those h2, h3 heading not clickable ,but not absolutely case. if depends.
                 }
 
 
