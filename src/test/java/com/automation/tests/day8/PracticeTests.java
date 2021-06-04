@@ -28,7 +28,8 @@ public class PracticeTests {
      *   --enter valid credentials
      *     username:tomsmith
      *     password:SuperSecretPassword
-     *   --verify that following sub-header message is displayed "Welcome to the Secure Area. When you are done click logout below."
+     *   --verify that following sub-header message is displayed
+     *   "Welcome to the Secure Area. When you are done click logout below."
      */
 
     private WebDriver driver;
