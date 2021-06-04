@@ -181,4 +181,9 @@ we don't use main method and we can create lots in one class.
            assertTrue(1==1);
            assertTrue(element.isDisplayed());
 
+           assertEquals()
+           assertEquals(1,1);
+           assertEquals("a","a");
+           assertEquals(driver.getTitle(),"Google");
+
  */
