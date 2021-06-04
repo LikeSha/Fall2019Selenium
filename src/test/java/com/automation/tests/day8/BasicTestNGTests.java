@@ -176,4 +176,9 @@ we don't use main method and we can create lots in one class.
            NullPointerException means : you are trying to use object what wasn't instantiated !
            just like you are trying to drinking water but it doesn't exist.
 
+           assertTrue()
+           assertTrue(true);
+           assertTrue(1==1);
+           assertTrue(element.isDisplayed());
+
  */
