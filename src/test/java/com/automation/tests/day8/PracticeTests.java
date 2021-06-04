@@ -9,9 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.List;
 
@@ -107,7 +105,7 @@ public class PracticeTests {
 
     }
 
-    @BeforeTest
+    @BeforeMethod
       public void setup(){
           WebDriverManager.chromedriver().setup();
           // Interview question : HOW TO HANDLE SSL ISSUES IN SELENIUM ? THEN ANSWER IS BELOW  4 LINES
@@ -122,7 +120,7 @@ public class PracticeTests {
           driver.manage().window().maximize();
       }
 
-      @AfterTest
+      @AfterMethod
       public void tearDown(){
          driver.quit();
       }
