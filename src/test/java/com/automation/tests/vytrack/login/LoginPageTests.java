@@ -114,7 +114,7 @@ Today is March 15,2020
 
        Question ? VERY FAMOUS INTERVIEW QUESTIONS
 
-       You have 500 test cases but the client aksed you to run only 40 of them for smoke test,
+       You have 500 test cases but the client asked you to run only 40 of them for smoke test,
        How will you do this ?
 
        Answer : So we use xml runners to create suite of tests and we already have xml runner for the smoke test .
@@ -144,7 +144,7 @@ Today is March 15,2020
        but you can not move node from child to parent like in xpath
 
        //div[@class='example']/div--go to div element , that is direct child of this element (only one step down)
-       //div[@class='example']//div==go to div element, that is any chld (grand child,
+       //div[@class='example']//div==go to div element, that is any child (grand child,
       grand grand child) of this element ( no limit for strpping down)
 
        CSS SELECTOR
