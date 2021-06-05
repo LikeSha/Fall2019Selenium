@@ -105,3 +105,52 @@ public class LoginPageTests {
     }
 
 }
+/*
+Today is March 15,2020
+
+    Agenda
+       TestNG
+       Locators : Xpath CSS Selector
+
+       Question ? VERY FAMOUS INTERVIEW QUESTIONS
+
+       You have 500 test cases but the client aksed you to run only 40 of them for smoke test,
+       How will you do this ?
+
+       Answer : So we use xml runners to create suite of tests and we already have xml runner for the smoke test .
+       In my framework,we group test scrips based on modules.
+       So for every module we have a corresponding package with test scripts.
+       Usually we create separate classes for smoke classes,
+       and store all the smoke test in one place to manage easily.
+
+
+       Log file : in computing, a log file is a file that records either events that
+       occur in an operating system or other software runs,
+       or messages between different users of a communication software.
+       Logging is the act of keeping a log. ... Many operating systems,
+       software frameworks and programs include a logging system => google
+
+       qa1.vyrack.com/user/login
+       qa2.vyrack.com/user/login
+       qa3.vyrack.com/user/login
+
+       under tests package create a package called "vytrack" ( qa2.vyrack.com/user/login)--->
+       under this package create a package called "login"
+
+       by using cssSelector : "[class='alert alert-error'] > div"  <---- this means direct go to next one child ,
+        not go to all grandchildren
+
+       in css selector ,you can move from parent to child element (node) ,
+       but you can not move node from child to parent like in xpath
+
+       //div[@class='example']/div--go to div element , that is direct child of this element (only one step down)
+       //div[@class='example']//div==go to div element, that is any chld (grand child,
+      grand grand child) of this element ( no limit for strpping down)
+
+       CSS SELECTOR
+
+ div[class='example'] > div ---go to div element, that is direct child of this element (only one step down) Greater (>) symbol.
+
+ div[class=‘example’] div - go to div element, that is any child (grand child, grand grand child)
+ of this element (no limit for stepping down). Just space.
+ */
