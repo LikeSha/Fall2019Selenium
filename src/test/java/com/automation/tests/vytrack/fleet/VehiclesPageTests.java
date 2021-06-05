@@ -39,6 +39,8 @@ public class VehiclesPageTests {
     private By subtitleBy = By.className("oro-subtitle");
     private By pageNumberBy = By.cssSelector("input[type='number']");
     // if we use xpath : //label[text()='Page:']/..//input  ( .. means go back to find the parent element)
+    // this method is based on first we looking for "page" element next to the number 1, we located number 1
+    //element based on "page" element which is next to the number 1 locator on the UI page
 
     private WebDriver driver;
     @Test
@@ -55,8 +57,7 @@ public class VehiclesPageTests {
         // Actions class is used for more advanced browser interactions
         Actions actions = new Actions(driver);
         //move to element instead of click , ACTIONS actually is telling browser hover over on page.
-        actions.moveToElement(driver.findElemen
-                t(fleetBy)).perform();
+        actions.moveToElement(driver.findElement(fleetBy)).perform();
         //perform -- to execute command
         //every action should end with perform()
         BrowserUtils.wait(2);
