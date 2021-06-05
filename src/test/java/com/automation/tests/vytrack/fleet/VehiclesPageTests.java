@@ -53,7 +53,7 @@ public class VehiclesPageTests {
 
         // Actions class is used for more advanced browser interactions
         Actions actions = new Actions(driver);
-        //move to element instead of click
+        //move to element instead of click , ACTIONS actually is telling browser hover over on page.
         actions.moveToElement(driver.findElement(fleetBy)).perform();
         //perform -- to execute command
         //every action should end with perform()
