@@ -160,5 +160,21 @@ public class VehiclesPageTests {
 -        // normally title are under the <head> tag on the top
  */
 
+/*
+You have 500 test cases but the client asked you to run only 40 of them for smoke test,
+       How will you do this ?
 
+       Answer : So we use xml runners to create suite of tests and we already have xml runner for the smoke test .
+       In my framework,we group test scrips based on modules.
+       So for every module we have a corresponding package with test scripts.
+       Usually we create separate classes for smoke classes,
+       and store all the smoke test in one place to manage easily.
+
+
+       Log file : in computing, a log file is a file that records either events that
+       occur in an operating system or other software runs,
+       or messages between different users of a communication software.
+       Logging is the act of keeping a log. ... Many operating systems,
+       software frameworks and programs include a logging system => google
+ */
 
