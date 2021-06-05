@@ -146,7 +146,19 @@ public class VehiclesPageTests {
 }
 
 
+/*
 
+-                                // to find out link xpath , for example if you see element like this :
+-                                // <a href="/context_menu">Context Menu</a>==$0
+-                                // we can input this  : //a[.='Contex Menu']
+-
+-
+-
+-
+- //how can you find title element ( tag) in a page ?
+-        //just type <title> in the search bar( ctrl+F)
+-        // normally title are under the <head> tag on the top
+ */
 
 
 
