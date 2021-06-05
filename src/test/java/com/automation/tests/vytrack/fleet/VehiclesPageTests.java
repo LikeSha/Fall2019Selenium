@@ -48,6 +48,8 @@ public class VehiclesPageTests {
         BrowserUtils.wait(5);
         //click on fleet
 //        driver.findElement(fleetBy).click();
+        //BrowserUtils.wait(2);
+        //driver.findElement(By.linkText("Vehicles)).click();
 
         // Actions class is used for more advanced browser interactions
         Actions actions = new Actions(driver);
