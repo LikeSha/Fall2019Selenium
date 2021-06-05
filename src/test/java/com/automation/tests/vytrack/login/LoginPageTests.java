@@ -40,8 +40,8 @@ public class LoginPageTests {
     //just like xpath "/"  function
 
     // you can also right click the warning message text , and select copy --> copy xpath
-    // then use By.xpath("//*[@id=\"login-form\"]/fieldset/div[1]/div"); as below ,also works
-    //private By warningMessageBy = By.xpath("//*[@id=\"login-form\"]/fieldset/div[1]/div");
+    // then use By.xpath("//*[@id="login-form"]/fieldset/div[1]/div"); as below ,also works
+    //private By warningMessageBy = By.xpath("//*[@id="login-form"]/fieldset/div[1]/div");
 
 
     @Test(description = " verify that warning message displays when user enters invalid username")
