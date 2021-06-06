@@ -48,6 +48,8 @@ public class CalendarEventsPageTests {
     //match id. * is cssSelector method.it calls contains.we selected static part of id and provided
     //into locator
 
+    // in cssSelector  # means id , see line 42
+
 
     @BeforeMethod
     public void setup() {
