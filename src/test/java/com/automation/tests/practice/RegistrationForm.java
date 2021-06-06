@@ -36,6 +36,9 @@ public class RegistrationForm {
     private By cplusplusBy = By.xpath("//label[text()='C++']/preceding-sibling::input");
     private By javaBy = By.xpath("//label[text()='Java']/preceding-sibling::input");
     private By javascriptBy = By.xpath("//label[text()='JavaScript']/preceding-sibling::input");
+    // WE USE this xpaht preceding-sibling and following-sibling method to help us locate the dynamic element
+    // this is very very useful method when locate dynamic element, we just need to find out the static element
+    //then preceding-sibling or following-sibling to catch that element.
      // sign up button
     private By signUpBy = By.id("wooden_spoon");
 
