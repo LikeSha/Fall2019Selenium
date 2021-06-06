@@ -153,4 +153,31 @@ Today is March 15,2020
 
  div[class=‘example’] div - go to div element, that is any child (grand child, grand grand child)
  of this element (no limit for stepping down). Just space.
+
+ How do I start automation?
+
+   First I create test cases and exectue test scenarios manually. It helps understand the logic of scenarios.
+   Then, I have to find all webelements and related methods to them. Then I start developing automation scripts.
+   Last step is ---generate report ( to provide evidences of my test results,
+   user friendly, html report have all steps and results in case of failure,
+   stacktrace ,and screenshot of failures , so I can use this report to demonstrate and explain what happened)
+
+   #######################################################
+
+   Scenario : Verify for store manager
+
+   regarding this test ,I am gonna create two scenarios , under vytrack package ,
+   we create another package named "activities" , then we create two classes ,
+   one is CallsPageTests, another one is CalendarEentsPageTest , as we can see ,
+   we create package based on module ! in another word, each module owns one package ,
+   that package exclusively for that module, so that our tests are super clear ,
+   we saved our test scripts according to different module .
+
+   Login as story manager
+   Go to Activites -->Calls
+   Verify that Log Call button is displayed
+
+   Go to Activities -->Calendar Events
+   Verify that Create Calendar Event button is displayed
+
  */
