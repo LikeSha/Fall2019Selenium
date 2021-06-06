@@ -50,6 +50,7 @@ public class CalendarEventsPageTests {
 
     // in cssSelector  # means id , see line 42
     // > greater sign means direct child  see line 42
+    // * in cssSelector means " starts-with" see line 45
 
 
     @BeforeMethod
