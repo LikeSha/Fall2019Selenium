@@ -49,6 +49,7 @@ public class CalendarEventsPageTests {
     //into locator
 
     // in cssSelector  # means id , see line 42
+    // > greater sign means direct child  see line 42
 
 
     @BeforeMethod
