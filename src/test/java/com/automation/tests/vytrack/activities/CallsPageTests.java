@@ -12,7 +12,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 public class CallsPageTests {
-
+  /*
+   Login as store manager
+   Go to Activities -->Calls
+   Verify that Log Call button is displayed
+   */
     private By usernameBy = By.id("prependedInput");
     private By passwordBy = By.id("prependedInput2");
     private WebDriver driver;
