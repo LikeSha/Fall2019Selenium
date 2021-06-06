@@ -24,7 +24,7 @@ import java.time.format.DateTimeFormatter;
  *
  * Scenario: Verify for store manager
  *
- * Login as story manager
+ * Login as store manager
  * Go to Activities --> Calendar Events
  * Verify that Create Calendar Event button is displayed
  */
