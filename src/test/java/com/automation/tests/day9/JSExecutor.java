@@ -67,7 +67,58 @@ public class JSExecutor {
 
 }
 
+/*
+March 18,2020
 
+     Agenda:
+       Actions class
+       JavascriptExecutor
+
+       //moveToElement returns instance of action class that's why we can chain them
+
+       //builder pattern => you put one method then you can take action
+//builder pattern == chaining methods
+
+//what is build?
+//if you have multiple actions you have to put build
+//to combine a couple of actions.
+
+//build() is needed when you have couple of actions
+//build combines the action; perform; starts the action
+//in this example; first we move to one image then second so we used build
+//always end with perform
+//perform does not click, it starts the action, execute the event
+//you can perform click, drag and drop etc
+//actions class has different implementations
+//moveToElement returns instance of action class that's why we can chain them
+
+
+Why do we need JavaScriptExecutor?
+In Selenium Webdriver, locators like XPath, CSS, etc. are used to identify and perform operations on a web page.
+In case, these locators do not work you can use JavaScriptExecutor.
+You can use JavaScriptExecutor to perform an desired operation on a web element.
+
+//how to use javaScriptExecutor?
+//javaScriptExecutor; it is an interface we can not create object out of it.
+//But javascript executor and webDriver are like siblings
+//So we will cast driver to JavascriptExecutor
+//we convert webDriver object into JavaScriptExecutor
+//JavascriptExecutor js = (JavascriptExecutor) driver;
+//interface => they don't have implementation
+//if you have interface as reference type you can see methods only coming from that interface
+//you can not see other methods that are in other interfaces
+//so we will use remoteWebDriver class as reference type :
+//if you use remoteWebDriver class as reference type you do not need to cast anymore, it has everything
+//like this => private RemoteWebDriver driver;
+            //driver.executeScript("window.scrollBy(0, 250)");
+//you need to cast if your reference type is webDriver; like this
+=>  private WebDriver driver;
+    //JavascriptExecutor js = (JavascriptExecutor) driver;
+
+    Actions builder = new Actions(driver)
+    builder.click(tableRows.get(1)).keyDown(Keys.CONTROL).click(tableRows.get(2).keyUp(Kyes.CONTROL)
+    .build().perform();
+ */
 
 
 
