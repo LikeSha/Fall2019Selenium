@@ -40,6 +40,8 @@ public class ActionsTests {
         //build() is needed when you have couple of actions
         //always end with perform()
         //pause(1000)---like Thread.sleep(1000);
+        // if you only have one item ( image) , you dont need build, but if you have multiple images
+        // you need build to chain the actions.
         actions.moveToElement(img1).
                 pause(1000).
                 moveToElement(img2).
