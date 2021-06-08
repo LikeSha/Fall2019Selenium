@@ -136,3 +136,83 @@ public class WebTables {
 
 
 }
+/*
+/*
+March 21,2020
+
+Agenda :
+   JavaScriptExecutor
+   WebTables
+
+   JavaScriptExecutor ---interface that allows to exectue JavaScript code as part of our selenium script
+
+   JavaScript---used for front-end development , and supported by every browser and website.
+   If, something doesn't work in selenium, we can do it with JavaScriptExecutor. For example : click
+
+//once you find email cell in the first table that has this email (jdoe@hotmail.com) then go to following sibling has linkText delete :
+////td[text()='jdoe@hotmail.com']//following-sibling::td/a[text()='delete']  TO MAKE IT EASIER CAN DO THIS WAY :
+//table[1]//td[text()='fbach@yahoo.com']//..//a[text()='delete'] --GO BACK TO PARENT  OR GO TO SECND LINK :
+//table[1]//td[text()='fbach@yahoo.com']//..//a[2] --THE SECOND LINK IS THE EMAIL YOU WANT TO DELETE
+
+JavaScriptExecutor is an Interface
+
+Since JavaScriptExecutor is an Interface , we cannot create an object of it. Instead, we can cast webdriver object.
+
+JavascriptExectutor js = (JavascriptExecutor) driver;
+Then , we can use executeScript method to run js code.
+
+## This method , performs text input.
+
+js.executeScript("arguments[0].setAttribute('value','tomsmith')",webelement);
+
+##This method element returns page title as a String
+
+js.executeScript("return document.title").toString();
+
+###This function scrolls until webelement is visible
+
+js.exectuteScript("arguments[0].scrollIntoView(true)",link);
+
+##########################################################################
+
+Web tables ---------used to store table data in HTML
+
+Structure of web table
+
+table
+  thread
+     tr
+          th
+          th
+  tbody
+     tr
+          td
+          td
+     tr
+          td
+          td
+  tfoot
+     tr
+          td
+
+ table---begining of web table
+ thead--table header, use to specify column names
+ tbody--table body, main content
+ tr==table row
+ th--table header data
+ td--table data
+
+ use indexes, to get specific values.
+
+ //table[1]//tbody//tr[1]//td[2]
+    means:
+       find first table
+       get first row from table body
+       and get second cell from that row
+
+//table[1]//td[text()='fbach@yahoo.com']//following-sibling::td/a[text()='delete']
+
+//table[1]//td[text()='fbach@yahoo.com']/..//a[text()='delete']
+
+ */
+ */
