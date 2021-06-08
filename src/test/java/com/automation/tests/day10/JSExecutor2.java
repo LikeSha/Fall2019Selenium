@@ -109,6 +109,7 @@ public class JSExecutor2 {
         js.executeScript("arguments[0].scrollIntoView(true)",link);
         //why we put (true) ?
         //scroll until it’s true, become visible
+        //GO TO developer.mozilla.org to find out more codding knowledge
     }
     @Test
     public void scrollTest(){
