@@ -35,6 +35,8 @@ public class JSExecutor2 {
         String actual = js.executeScript("return document.title").toString();
         //if we don't call toString method , then we have to cast it , just like this :
         // String actual = (String) js.executeScript("return document.title");
+        // if you want to get the title on webpage , right click "inspect " then at the page ,
+        // open up tag " Console" --> type " document.title" . then the result would be "Practice" in red color
 
         Assert.assertEquals(actual,expected);
     }
