@@ -34,7 +34,7 @@ public class JSExecutor2 {
         //.toString()--to avoid additional casting from Object to String
         String actual = js.executeScript("return document.title").toString();
         //if we don't call toString method , then we have to cast it , just like this :
-        // String actual = (String) js.exectuteScript("return document.title");
+        // String actual = (String) js.executeScript("return document.title");
 
         Assert.assertEquals(actual,expected);
     }
