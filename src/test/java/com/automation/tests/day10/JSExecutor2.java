@@ -52,7 +52,7 @@ public class JSExecutor2 {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //after "" you can list webelements that will be used
         //as part of your javascript code
-        //it's varargs,so you can list 0+
+        //it's varargs,so you can list 0+   varargs = Variable Arguments, it works like array
         //arguments--listed after ,
         //use index to get specific webelement
         //WebElement arguments - {element,link, link2)
