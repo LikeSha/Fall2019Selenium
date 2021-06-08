@@ -215,4 +215,3 @@ table
 //table[1]//td[text()='fbach@yahoo.com']/..//a[text()='delete']
 
  */
- */
