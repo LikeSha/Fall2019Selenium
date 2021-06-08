@@ -38,6 +38,8 @@ public class JSExecutor2 {
         // if you want to get the title on webpage , right click "inspect " then at the page ,
         // open up tag " Console" --> type " document.title" . then the result would be "Practice" in red color
 
+        // when we use Javascript code ? 1. to click(); 2.scroll; 3. to enter text
+
         Assert.assertEquals(actual,expected);
     }
 
