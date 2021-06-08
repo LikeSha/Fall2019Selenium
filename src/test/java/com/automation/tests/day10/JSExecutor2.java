@@ -119,6 +119,8 @@ public class JSExecutor2 {
         for (int i = 0; i < 15; i++) {
             js.executeScript("window.scrollBy(0, 1000)");
             BrowserUtils.wait(1);
+            // js.executeScript("window.scrollBy(0, 1000)"); this is default scroll down
+            // if I put -1000 , it means scroll up
         }
     }
 
