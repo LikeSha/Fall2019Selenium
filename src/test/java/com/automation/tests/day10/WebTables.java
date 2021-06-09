@@ -62,7 +62,7 @@ public class WebTables {
      */
     @Test
     public void getSpecificColumn(){
-        // td[5] ---column with links
+        // td[5] ---column with links  // we are collecting all websites. website is in the table cell(data)
              List<WebElement> links = driver.findElements(By.xpath("//table[1]//tbody//tr//td[5]"));
         System.out.println(BrowserUtils.getTextFromWebElements(links));
 
