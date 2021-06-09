@@ -214,4 +214,8 @@ table
 
 //table[1]//td[text()='fbach@yahoo.com']/..//a[text()='delete']
 
+//table[@id='table1']//tbody//tr[1]//td[3] --cybertekc school practice tables , locate the jsmith@gmail in first table
  */
+
+
+
