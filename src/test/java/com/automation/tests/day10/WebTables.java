@@ -59,6 +59,8 @@ public class WebTables {
 
     /**
      * To get specific column, skip row index, and just provide td index
+     * if you input index behind tr , like : tr[1] or tr[2], it will specific get the data from that row only
+     * however, in this test ,we need to collect all data cell which are all website links.
      */
     @Test
     public void getSpecificColumn(){
