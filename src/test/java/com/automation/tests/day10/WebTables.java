@@ -37,6 +37,7 @@ public class WebTables {
      @Test
     public void getColumnNames(){
         //th--represents table header
+         //collect all table header means collect all column names of this table,so we use " th "
          List<String> expected = Arrays.asList("Last Name", "First Name", "Email", "Due", "Web Site", "Action");
          List<WebElement> columnNames = driver.findElements(By.xpath("//table[1]//th"));
 
