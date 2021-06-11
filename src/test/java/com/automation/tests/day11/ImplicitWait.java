@@ -18,7 +18,7 @@ public class ImplicitWait {
     public void setup(){
         driver = DriverFactory.createDriver("chrome");
         driver.get("http://practice.cybertekschool.com/dynamic_loading/2");
-        // this is how w apply implicit wait
+        // this is how we apply implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
