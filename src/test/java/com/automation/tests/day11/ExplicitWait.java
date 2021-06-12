@@ -185,8 +185,8 @@ Waits from selenium :
  Explicit wait---provides better way to wait over implicit wait. Unlike implicit wait,
  you can write and use pre-defined conditions or custom conditions before proceeding further.
 
- Exlicit wait ---exact condition and exact element.
- Implicit wait ----only one conditon ( presence of element in the DOM) and it applies for every findElement()
+ Explicit wait ---exact condition and exact element.
+ Implicit wait ----only one condition ( presence of element in the DOM) and it applies for every findElement()
  method invocation
 
  How to implement Explicit wait ?
@@ -199,7 +199,7 @@ Waits from selenium :
 
 ExpectedConditions class provides a set of predefined conditions to wait for before proceeding further.
 
-somoe common explicit wait conditions :
+some common explicit wait conditions :
 
 elementToBeClickable();
 visibilityOf();
@@ -213,10 +213,10 @@ WebElement buttonElement = driver.findElement(By.xpath("//button[6]"));
 WebDriverWait wait = new WebDriverWait(driver.10);
 wait.until(ExpectedConditions.elementToBeClickable(buttonElement));
 
-this wiat means : wait for up to 10 seconds, until button becomes eligible to click
+this wait means : wait for up to 10 seconds, until button becomes eligible to click
 
-WebDriverWait has a dfault polling time---500 milliseconds.
-It means that WebDriver is checking every 500 milliseconds if conditon is true.
+WebDriverWait has a default polling time---500 milliseconds.
+It means that WebDriver is checking every 500 milliseconds if condition is true.
 
 Explicit wait ---it's an individual approach. Wheres Implicit ---is general approach
 
