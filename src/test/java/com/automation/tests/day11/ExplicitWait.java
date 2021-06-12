@@ -169,7 +169,7 @@ Waits from selenium :
  Default implicit wait is ---0 second;
 
  When implicit wait has been applied , webdriver will try to look up for element in the specified period of time.
- If element was found faster, exictuion will be resumed.
+ If element was found faster, execution will be resumed.
 
  How to use implicit wait ?
  Use only once after get() method.
