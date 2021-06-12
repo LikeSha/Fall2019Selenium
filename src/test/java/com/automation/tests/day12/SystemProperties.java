@@ -12,6 +12,7 @@ public class SystemProperties {
         System.out.println(System.getProperty("os.name"));
 
         //flexible path to downloads folder
+        // for windows, use\\ in stead of /
         String pathToDownLoads = System.getProperty("user.home")+"/Downloads";
 
         System.out.println(pathToDownLoads);
