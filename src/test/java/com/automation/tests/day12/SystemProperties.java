@@ -6,7 +6,8 @@ public class SystemProperties {
 
     @Test
     public void test(){
-       //System.getProperty("user.dir")+"/pom.xml"
+       //System.getProperty("user.dir")+"/pom.xml"  <-- by giving this path to your teammates ,everyone get
+        //same thing from you . it much easier for everyone.
         System.out.println(System.getProperty("user.dir"));
         System.out.println(System.getProperty("os.name"));
 
