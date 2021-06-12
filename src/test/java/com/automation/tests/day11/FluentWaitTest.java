@@ -21,6 +21,11 @@ public class FluentWaitTest {
         driver = DriverFactory.createDriver("chrome");
     }
 
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
+    }
+
 
     @Test
     public void fluentWaitTest() {
