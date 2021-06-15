@@ -18,3 +18,8 @@ public class VehiclesPage extends AbstractPageBase {
     }
 
 }
+
+/*
+  page to page : page--page  ---> VehiclesPage extends AbstractPageBase
+  test to test : test --test ---> NewLoginTest extends AbstractTestBase
+ */
