@@ -67,7 +67,7 @@ public abstract class AbstractTestBase {
     @BeforeMethod
     public void setup(){
         String URL = ConfigurationReader.getProperty("qa3");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get(URL);// get() method is coming from WebDriver();
         Driver.getDriver().manage().window().maximize();
         wait = new WebDriverWait(Driver.getDriver(),15);
         actions = new Actions(Driver.getDriver());
