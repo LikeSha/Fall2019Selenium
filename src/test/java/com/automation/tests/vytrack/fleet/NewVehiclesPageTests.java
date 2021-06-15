@@ -20,3 +20,9 @@ public class NewVehiclesPageTests extends AbstractTestBase {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
+
+/*
+  Why we can use method : vehiclesPage.navigateTo("Fleet", "Vehicles"); because :
+  VehiclesPage class extends AbstractPageBase class , the method navigateTo , is inside AbstractPageBase class
+  since VehiclesPage extends that class, so it of course extends methods in that class.
+ */
