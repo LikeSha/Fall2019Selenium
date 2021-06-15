@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class VehiclesPage extends AbstractPageBase {
-
+    // we extends AbstractPageBase ,what it give us ? First , PageFactory initialized ! then navigations available,
+    // it inherited all attributes and behavior of AbstractPageBase class.
     @FindBy(partialLinkText = "Create Car")
     private WebElement createCar;
 
