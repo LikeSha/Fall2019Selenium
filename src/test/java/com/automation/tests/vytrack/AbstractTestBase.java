@@ -118,6 +118,7 @@ Agenda:
    it might cause unexpectedly long delays.
 
    If we would use implicit wait- it would go into @BeforeMethod
+   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
    Explicit wait - used inside a test itself , Since we have to provide a WebElement,
    unless @BeforeMethod use some kind of WebElements.
