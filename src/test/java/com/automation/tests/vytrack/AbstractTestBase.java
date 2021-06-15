@@ -126,10 +126,10 @@ Agenda:
 
    Test base -- abstract class that is used as a basement for all test classes.
    This class provides minimum essential setup and cleanup for every test of our project.
-   Class is abstrct because has to be extended.Doesn't contain any test itself.
-   In this class, we initialize WebDriveWait, Actions class objects and open the browser.
+   Class is abstract because has to be extended.Doesn't contain any test itself.
+   In this class, we initialize WebDriverWait, Actions class objects and open the browser.
    Should be stored under tests package or some kind of base package.
-   Bust not under the utilities package. We can also add @Before/After test, class,suit methods if needed.
+   But not under the utilities package. We can also add @Before/After test, class,suit methods if needed.
 
    why test base class not restore in utility package ? because its NOT Utility.its a test base class!!
    under utilities package what classes you can have :
