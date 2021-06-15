@@ -52,7 +52,7 @@ public abstract class AbstractPageBase {
      */
     public void navigateTo(String tabName, String moduleName) {
 //        String tabNameXpath = "//span[@class='title title-level-1' and contains(text(),'Fleet')]";
-        //we replace "'Fleet'" to below line of code '" + tabName + "' to make it dynamic
+        //we replace 'Fleet' to below line of code '" + tabName + "' to make it dynamic
         String tabNameXpath = "//span[@class='title title-level-1' and contains(text(),'" + tabName + "')]";
         String moduleXpath = "//span[@class='title title-level-2' and text()='" + moduleName + "']";
 
