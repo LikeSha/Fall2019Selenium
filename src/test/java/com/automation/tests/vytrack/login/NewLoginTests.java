@@ -23,6 +23,7 @@ public class NewLoginTests extends AbstractTestBase {
             test = report.createTest("Verify page title");
 
             LoginPage loginPage = new LoginPage();// we created page object inside the test !
+            // what happened when you created object ? construction(in LoginPage class) will be called!
             loginPage.login();
             //like system.out, but it goes to report as well
             test.info("Login as store manager");//log some steps
