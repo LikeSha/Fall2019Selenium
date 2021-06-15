@@ -22,7 +22,7 @@ public class NewLoginTests extends AbstractTestBase {
             //test = report.createTest("Test name");
             test = report.createTest("Verify page title");
 
-            LoginPage loginPage = new LoginPage();
+            LoginPage loginPage = new LoginPage();// we created page object inside the test !
             loginPage.login();
             //like system.out, but it goes to report as well
             test.info("Login as store manager");//log some steps
