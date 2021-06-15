@@ -18,6 +18,8 @@ import java.io.IOException;
 public abstract class AbstractTestBase {
     //We use protected access modifier is because :
     // will be visible in the subclass , regardless on subclass location(same package or no)
+    // protected visible : inside class, same Package Class,Same Package Sub-Class,Other Package Sub-Class
+    // protected ONLY NOT VISIBLE IN Other Package Class.
     protected WebDriverWait wait;
     protected Actions actions;
 
