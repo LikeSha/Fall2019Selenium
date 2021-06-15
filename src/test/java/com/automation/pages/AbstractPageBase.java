@@ -31,7 +31,10 @@ public abstract class AbstractPageBase {
     protected WebElement currentUser;
 
     public AbstractPageBase() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, this); // see AbstractLoginPage also have this PageFactory
+        // PageFactory has to be initialized in every page class. Since this class is the parent class of all
+        //other page classes,we can only do this once in this paticular class, we don't have to do this again in
+        //each and every child page class
     }
 
 
