@@ -17,7 +17,7 @@ public class VehiclesPage extends AbstractPageBase {
     }
 
     // we extends AbstractPageBase ,what it give us ? First , PageFactory initialized ! then navigations available,
-    // it inherited all attributes and behavior of AbstractPageBase class.
+    // it inherited all properties and behavior of AbstractPageBase class.
 
 // why do we need this method in this page ? why we not directly made this webelement available in the test class and
     //click on it ? the reason is very simple : because of wait issue. we need to take care of this wait issue
