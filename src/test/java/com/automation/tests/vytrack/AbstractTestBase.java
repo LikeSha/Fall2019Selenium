@@ -131,7 +131,7 @@ Agenda:
    Should be stored under tests package or some kind of base package.
    But not under the utilities package. We can also add @Before/After test, class,suit methods if needed.
 
-   why test base class not restore in utility package ? because its NOT Utility.its a test base class!!
+   why test base class not store in utility package ? because its NOT Utility.its a test base class!!
    under utilities package what classes you can have :
    String utility, datetime utility,fileutility,browserutility, APIutility, databaseutility......
    they are reusabble collections and reusable methods.!
