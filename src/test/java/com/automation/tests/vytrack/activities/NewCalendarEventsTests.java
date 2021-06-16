@@ -37,7 +37,7 @@ public class NewCalendarEventsTests extends AbstractTestBase {
         test = report.createTest("Verify default login options");
 
         LoginPage loginPage = new LoginPage();// if I want to interact with that page ,I create that page object!
-        CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
+        CalendarEventsPage calendarEventsPage = new CalendarEventsPage();// if I want to interact with that page ,I create that page object!
 
         loginPage.login();
         calendarEventsPage.navigateTo("Activities", "Calendar Events");
