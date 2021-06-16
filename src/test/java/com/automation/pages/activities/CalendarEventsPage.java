@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 
 // object repository -- page package--> where is your page classes -->
-// from page classes you create page objects.
+// from page classes you create page objects. page objects created in the correspondence test class !
 
 public class CalendarEventsPage extends AbstractPageBase {
 
