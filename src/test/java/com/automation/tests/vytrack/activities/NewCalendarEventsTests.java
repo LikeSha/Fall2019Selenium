@@ -28,6 +28,7 @@ public class NewCalendarEventsTests extends AbstractTestBase {
      * If you wanna interact with any page ( test any page) you need to create page object !
      * that means : if you wanna interact with login page ,you need to first create login page object
      * if you want to interact with calendarEventsPage, you need to create calenderEventPage object !
+     * page objects created in the correspondence test class !
      */
     @Test
     public void defaultOptionsTest() {
