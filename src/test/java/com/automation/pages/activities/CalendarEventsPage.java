@@ -271,3 +271,10 @@ In test classes, we just create a page objects and call methods to interact with
 Also, we use assertions in the test classes.
 
  */
+
+/*
+Why we put current user element undr base page class and owner element under createCalendarEvent page class?
+
+current user element belongs to top menu.Top menu, navigation menu doesn't belong to particular page.
+Since top menu elements are shared, we can store them in the base page class.
+ */
