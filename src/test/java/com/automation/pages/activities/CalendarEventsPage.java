@@ -20,7 +20,7 @@ public class CalendarEventsPage extends AbstractPageBase {
     private WebElement createCalendarEvent;
 
     @FindBy(className = "select2-chosen") // in inspect area ctrl+F we input: .select2-chosen ,this is css selector
-    private WebElement owner;
+    private WebElement owner;             // . in cssSelector means className # means id
 
     @FindBy(css = "[id^='date_selector_oro_calendar_event_form_start']")
     private WebElement startDate;
