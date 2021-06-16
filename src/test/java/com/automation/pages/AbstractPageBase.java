@@ -23,6 +23,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * We cannot really create a dedicated page class to store
  * elements from that menu
  */
+
+// object repository -- page package--> where is your page classes -->
+// from page classes you create page objects. page objects created in the correspondence test class !
+//In test classes, we just create a page objects and call methods to interact with page to perform testing.
+// Also, we use assertions in the test classes.
 public abstract class AbstractPageBase {
     protected WebDriver driver = Driver.getDriver();
     protected WebDriverWait wait = new WebDriverWait(driver, 25);
