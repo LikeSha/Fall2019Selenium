@@ -90,9 +90,9 @@ public class BrowserUtils {
         //where we gonna store a screenshot
         String path = "";
         if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-            path = System.getProperty("user.dir") + "/test-output/screenshots/" + name + ".png";
+            path = System.getProperty("user.dir") + "/test-output/screenshots/" + name + ".png";//path for mac user
         } else {
-            path = System.getProperty("user.dir") + "\\test-output\\screenshots\\" + name + ".png";
+            path = System.getProperty("user.dir") + "\\test-output\\screenshots\\" + name + ".png";//path for windows
         }
         System.out.println("OS name: " + System.getProperty("os.name"));
         System.out.println("Screenshot is here: " + path);
