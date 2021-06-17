@@ -116,3 +116,37 @@ public class BrowserUtils {
     }
 
 }
+
+/*
+March 31,2020
+
+  Agenda :
+     Take a screenshot
+     Extent report --> pretty HTML report that can be added to your test automation framework.
+
+     ###################################################################################################
+
+     In Selenium WebDriver there is an interface that is responsible for screenshots
+
+     TakeScreenshot -- only one method , getScreenshotAs
+
+     This method , will be used to take a scrrenshot whenever something fails in our code.
+     We can put a condition into @Aftermethod -->if test fails,--> take a screenshot,
+     save it and later on attach to the HTML report. Report it's our evidence file. Especailly,
+     when we are running big suits of tests, like regression,
+     it's gonna be very difficult to demonstrate test results without HTML report.
+
+     /copy file to the previously specified location
+//FileUtils class comes from java, to work with the files, general file manipulation properties
+//It stores methods to work with file
+//takes 2 argument,where is your file and where to save it
+FileUtils.copyFile(source,destination);
+
+
+http://extentreports.com/docs/versions/4/java/
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.3.1</version>
+</dependency>
+ */
