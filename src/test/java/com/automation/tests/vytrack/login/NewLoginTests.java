@@ -51,8 +51,8 @@ public class NewLoginTests extends AbstractTestBase {
 
             test.pass("Warning message is displayed");
         }
-
-        @Test(dataProvider = "credentials") // this annotation is the way we connect to our dataProvider.
+        //this example is " one test runs 3 times using different data.
+        @Test(dataProvider = "credentials") // this annotation is the way we connect to our dataProvider.(line66)
         public void loginWithDDT(String userName, String password) {//provide parameters for credential test data
             test = report.createTest("Verify page title as " + userName);
             LoginPage loginPage = new LoginPage();
@@ -68,7 +68,7 @@ public class NewLoginTests extends AbstractTestBase {
             return new Object[][]{
                     {"storemanager85", "UserUser123"},
                     {"salesmanager110", "UserUser123"},
-                    {"user16", "UserUser123"}
+                    {"user16", "UserUser123"} // this example is " one test runs 3 times using different data.
             };
         }
 
