@@ -52,8 +52,8 @@ public class NewLoginTests extends AbstractTestBase {
             test.pass("Warning message is displayed");
         }
 
-        @Test(dataProvider = "credentials")
-        public void loginWithDDT(String userName, String password) {
+        @Test(dataProvider = "credentials") // this annotation is the way we connect to our dataProvider.
+        public void loginWithDDT(String userName, String password) {//provide parameters for credential test data
             test = report.createTest("Verify page title as " + userName);
             LoginPage loginPage = new LoginPage();
             loginPage.login(userName, password);
