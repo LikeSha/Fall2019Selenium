@@ -159,3 +159,114 @@ public class NewCalendarEventsTests extends AbstractTestBase {
         };
     }
 }
+
+/*
+April 4,2020
+
+   Agenda :
+             data provider
+             testng xml runners
+             maven surefire plugin
+             test execution over terminal with maven commands
+             test parametrization
+             summary of testng framework
+
+   Tomorrow :
+            Practice session, no new topics
+            Building a framework for every simple application and creating some test scripts
+
+   Tuesday : BDD and Cucumber
+
+   #########################################################################################
+
+   Data Driven Testing (DDT) --- it's when your test data is separate  from your code .
+   Basically, you don't store test data in variables . where this data can be stored ?
+   In excel and csv files, in database. In terms of cucumber bdd framework----feature files.
+
+   To read excel files, there is java library that calls apache poi, We gonna cover it in this course .
+   In terms csv files, it's a plain text file where values are sparated by comma. To read it ,
+   you can use Scanner. But, there are more advanced libraries, like Open CSV.
+
+   To connect from java to data base, there is JDBC api.
+
+   Why do we need DDT ? It allows us to run same script with different test data
+
+   TestNG natively supports DDT through Data Provider.
+
+   Data Provider--allows to run same test multiple times with different test sets.
+
+   For example : you have tests cases where you to create cars. And you need to create like 20 of them.
+   Steps are the same, the only difference is --test data. So instead of creating 20 identical test scripts,
+   we can just create a one , and supply that test with a test data from data provider
+   -----This example is from vytrack project . fleet--vehicles--create car
+
+
+
+   //With enterCalendarEventDescription method in page class;
+//you do not need to switch frame inside test,
+//everything is covered is covered inside page; all kind of page interactions
+
+############################################################################################################
+below is example how to connect dataProvider to your test :
+
+ @Test(dataProvider = "credentials")
+    public void loginWithDDT(String userName, String password) {
+        test = report.createTest("Verify page title as " + userName);
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(userName, password);
+        test.info("Login as " + userName);//log some steps
+        BrowserUtils.wait(2);
+        Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
+        test.pass("Page title Dashboard was verified");
+    }
+    //Object[][] or Object[] or Iterator<Object[]>
+    //Object[]----1 column with a data
+    //Object[][] 2+
+    //now line 52 and below the block of codes connected to your dataprovider (line 66 to73)
+    @DataProvider
+    public Object[][] credentials() {
+        return new Object[][]{
+                {"storemanager85", "UserUser123"},
+                {"salesmanager110", "UserUser123"},
+                {"user16", "UserUser123"}
+        };
+    }
+
+######################################################################################################
+--createa a page object inside a test itself
+
+Framework that implements Data Driven Testing calls---Data Driven Framework
+
+###########################################################
+
+testng xml runners
+
+testng.xml -->xml file that is used to create test suits.
+
+what kind of test suits ? for example : major regress test suit, ( including all test cases );
+we can selectively test some components; we can create smoke test suit.
+
+xml file runner helps us to select tests from different classes and group them ,and create test suit.
+
+xml---file extension, for example pom.xml file
+
+what's the name of test ng xml runner file ?
+
+    name can be anyting , like : smoke.xml , regression.xml,  fleet.xml, but default name is testng.xml
+
+    how many xml runners we can create ? as many as we need
+
+    what are the requirements for xml runner file ?
+       first of all, it should start with one line, that specifies document type :
+
+       <!DOCTYPE suite SYSTEM "https://tesn.org/testng-1.0.dtd">
+
+       source : https://testng.org/doc/documentation-main.html#parameters-dataproviders
+
+       ##################################################################
+
+       ElementClickIntercepteException---something was clicked instead of your element.Put more wait tiem.
+       NoSuchSessionExceptiondriver object was called but not created.
+
+
+ */

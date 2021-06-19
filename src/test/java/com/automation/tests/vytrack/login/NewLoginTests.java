@@ -347,6 +347,9 @@ testng xml runners
 
 testng.xml -->xml file that is used to create test suits.
 
+what kind of test suits ? for example : major regress test suit, ( including all test cases );
+we can selectively test some components; we can create smoke test suit.
+
 xml---file extension, for example pom.xml file
 
 what's the name of test ng xml runner file ?
