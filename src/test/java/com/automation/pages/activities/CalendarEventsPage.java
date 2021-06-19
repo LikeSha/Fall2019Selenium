@@ -45,7 +45,8 @@ public class CalendarEventsPage extends AbstractPageBase {
     @FindBy(id="tinymce")
     private WebElement descriptionTextArea;
 
-    @FindBy(css = "[class='btn-group pull-right'] > button")
+    @FindBy(css = "[class='btn-group pull-right'] > button") // > means direct go to next tag button, in this
+    // case ,if we don't write > button, then it will select Save And Close tab + the drop down arrow next to it.
     private  WebElement saveAndClose;
 
     @FindBy(xpath = "(//div[@class='control-label'])[1]")
