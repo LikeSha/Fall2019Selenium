@@ -37,7 +37,7 @@ public abstract class AbstractTestBase {
 
     @BeforeTest
     @Parameters("reportName") // this line of code is link to our testng.xml, in order to specify each test has different report name
-    public void setupTest(@Optional String reportName){
+    public void setupTest(@Optional String reportName){// @Optional String reportName also link to testng.xml
         System.out.println("Report name : " + reportName);
         reportName  = reportName==null?"report.html":reportName+".html";
         //if the report name is provided in testng xml file;
