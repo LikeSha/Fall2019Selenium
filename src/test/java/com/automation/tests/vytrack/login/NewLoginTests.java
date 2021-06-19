@@ -375,7 +375,12 @@ testNG suit in our project : it is inside testng.xml file
        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Test suite">
 <test name="Login">                              // this line providing what test you want to run
-    <parameter name="reportName" value="login"/>
+    <parameter name="reportName" value="login"/> // this line providing what test you want to run
+                                                 / this line providing what test you want to run
+                                                    //this parameter is mean " we need to creat
+                                                     different report based on different test name"
+                                                     if test name is login ,the parameter value = "login"
+                                                     if test name is calendarEvents then parameter should be "calendarEvents"
     <classes>
         <class name="com.automation.tests.vytrack.login.NewLoginTests"/> // this line is providing which class you want to test
     </classes>
