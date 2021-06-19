@@ -74,7 +74,7 @@ public class CalendarEventsPage extends AbstractPageBase {
       //  BrowserUtils.clickWithJS(saveAndClose); // or we can use saveAndClose.click();
     }
 
-   public String getGeneralInfoTitle(){
+   public String getGeneralInfoTitleText(){
         BrowserUtils.waitForPageToLoad(20);
         return generalInfoTitle.getText();
    }
