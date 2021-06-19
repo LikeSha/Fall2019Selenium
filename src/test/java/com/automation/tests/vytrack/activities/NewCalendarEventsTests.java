@@ -107,6 +107,7 @@ public class NewCalendarEventsTests extends AbstractTestBase {
 
     @Test
     public void verifyColumnNamesTest() {
+        //we must add to every test at the beginning
         test = report.createTest("Verify column names");
 
         LoginPage loginPage = new LoginPage();
