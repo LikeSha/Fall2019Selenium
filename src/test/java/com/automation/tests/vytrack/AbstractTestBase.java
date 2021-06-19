@@ -272,4 +272,38 @@ http://extentreports.com/docs/versions/4/java/
     <artifactId>extentreports</artifactId>
     <version>4.3.1</version>
 </dependency>
+
+
+
+
+
+
+smoke test suit formate example :
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Smoke">
+    <test name="Smoke test">
+        <!--        represents extent report name-->
+        <parameter name="reportName" value="smoke"/>
+        <classes>
+            <class name="com.automation.tests.vytrack.login.NewLoginTests">
+                <methods>
+                    <!--                    remove loginWithDDT method from test execution list-->
+                    <exclude name="loginWithDDT"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
+now lets explain smoke test steps :
+
+
+if we wirte <methods></methods>  ---> this measn inside <methods>  ,
+we put the tests that WE DON'T WANT TO DO SMOKE TEST ""  in thi case , we just remove loginWithDDT test out of smoke test suits,  in another words , we don't want to smoke test this "loginWithDDT" from the execution.
+
+<methods></methods> should be inside the " <class></class>"
  */
