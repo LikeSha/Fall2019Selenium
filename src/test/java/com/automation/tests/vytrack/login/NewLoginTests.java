@@ -370,5 +370,32 @@ what's the name of test ng xml runner file ?
        ElementClickIntercepteException---something was clicked instead of your element.Put more wait tiem.
        NoSuchSessionExceptiondriver object was called but not created.
 
+testNG suit in our project : it is inside testng.xml file
+
+       <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test suite">
+<test name="Login">
+    <parameter name="reportName" value="login"/>
+    <classes>
+        <class name="com.automation.tests.vytrack.login.NewLoginTests"/>
+    </classes>
+</test>
+<test name="Calendar events">
+    <parameter name="reportName" value="calendarEvents"/>
+    <classes>
+        <class name="com.automation.tests.vytrack.activities.NewCalendarEventsTests"/>
+    </classes>
+</test>
+</suite>
+
+
+
+
+ TIP : IN above testNG suit schema , if we test " classes" it will immediately give us errors ,
+ so we should type this : classes + TAP ---> it automatically bring us :
+
+ <classes>
+
+ </classes>   this formula.
 
  */
