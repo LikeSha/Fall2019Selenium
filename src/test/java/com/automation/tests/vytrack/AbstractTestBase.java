@@ -36,7 +36,7 @@ public abstract class AbstractTestBase {
     //if you don't specify it , testng will require to specify this parameter for every test , in xml runner
 
     @BeforeTest
-    @Parameters("reportName")
+    @Parameters("reportName") // this line of code is link to our testng.xml, in order to specify each test has different report name
     public void setupTest(@Optional String reportName){
         System.out.println("Report name : " + reportName);
         reportName  = reportName==null?"report.html":reportName+".html";

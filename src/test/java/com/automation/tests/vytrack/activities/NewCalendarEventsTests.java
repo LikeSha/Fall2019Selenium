@@ -309,4 +309,9 @@ Just right click " testng.xml" file, then select " Run'/user/owners/idealproject
  --> this is your project address in your computer
  if you dont have that "Run" button ,just close testng.xml file and open it again .
 
+ this line of code explaination : <parameter name="reportName" value="calendarEvents"/>  is on the above .
+  but how does testng know "reportName" ?  we just need to add
+
+@Parameter("reportName") under " BeforeTest" tag in AbstractTestBase class.
+
  */
