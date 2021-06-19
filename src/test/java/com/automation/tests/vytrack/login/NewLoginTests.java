@@ -374,16 +374,16 @@ testNG suit in our project : it is inside testng.xml file
 
        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Test suite">
-<test name="Login">
+<test name="Login">                              // this line providing what test you want to run
     <parameter name="reportName" value="login"/>
     <classes>
-        <class name="com.automation.tests.vytrack.login.NewLoginTests"/>
+        <class name="com.automation.tests.vytrack.login.NewLoginTests"/> // this line is providing which class you want to test
     </classes>
 </test>
 <test name="Calendar events">
     <parameter name="reportName" value="calendarEvents"/>
     <classes>
-        <class name="com.automation.tests.vytrack.activities.NewCalendarEventsTests"/>
+        <class name="com.automation.tests.vytrack.activities.NewCalendarEventsTests"/> // anything after "java" folder , is your project path
     </classes>
 </test>
 </suite>
@@ -397,5 +397,15 @@ testNG suit in our project : it is inside testng.xml file
  <classes>
 
  </classes>   this formula.
+
+class is self closable tag, means  it will auto follow the sign "/" at the end of your route , just like this :
+
+<class name="com.automation.tests.vytrack.login.NewLoginTests"/>
+
+How to run testNG test suit ?
+
+Just right click " testng.xml" file, then select " Run'/user/owners/idealproject"
+ --> this is your project address in your computer
+ if you dont have that "Run" button ,just close testng.xml file and open it again .
 
  */
