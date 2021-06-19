@@ -42,7 +42,7 @@ public class CalendarEventsPage extends AbstractPageBase {
     @FindBy(css = "[id^='oro_calendar_event_form_title-uid']")
     private WebElement title;
 
-    @FindBy(id="tinymce") // or we use cssSelector : #mceu_101 > iframe
+    @FindBy(id="tinymce")
     private WebElement descriptionTextArea;
 
     @FindBy(css = "[class='btn-group pull-right'] > button")
