@@ -280,6 +280,8 @@ http://extentreports.com/docs/versions/4/java/
 
 smoke test suit formate example :
 
+right click my project name on top of intelliJ ---> click file---> create new file ---> name is " smoke_test.xml"
+
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Smoke">
