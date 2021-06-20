@@ -16,6 +16,8 @@ public class ReadDataFromExcel {
         //we need to get a file as an object
         File file = new File("VytrackTestUsers.xlsx");// this File can be any file, its generic
         //object that represents excel file  //Workbook workbook is specific for excel object.Its coming from apache.poi
+        // you can right click the file name on the left under testng.xml, copy path->path from repository root and
+        // put it inside File file = new File("VytrackTestUsers.xlsx");
         Workbook workbook = WorkbookFactory.create(file);
         //get QA1-short QA1-short is the spreadsheet name which is one the bottom of the excel file page.
         Sheet workSheet = workbook.getSheet("QA1-short");
