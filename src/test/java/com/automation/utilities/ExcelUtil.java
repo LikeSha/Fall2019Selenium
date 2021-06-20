@@ -53,7 +53,7 @@ public class ExcelUtil {
         }
     }
 
-    public String[][] getDataArray() {
+    public String[][] getDataArray() { // this method is used to pass data provider ,its very commonly used.
 
         String[][] data = new String[rowCount()][columnCount()];
 
