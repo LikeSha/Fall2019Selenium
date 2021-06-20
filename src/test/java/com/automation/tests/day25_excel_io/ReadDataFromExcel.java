@@ -34,8 +34,8 @@ public class ReadDataFromExcel {
         System.out.println(value);
         System.out.println(secondCellValue);
 
-        int lastCell = firstRow.getLastCellNum(); // this is the index of the last column, index from 0, the physical
-        // number of column should add 1 to this . cell = column
+        int lastCell = firstRow.getLastCellNum(); // this is the index of the last column its 5, index from 0, the physical
+        // number of column should add 1 to this . total physical number of columns are 6 .cell = column
         System.out.println("######################");
 
         for (int i = 0; i < lastCell; i++) {
