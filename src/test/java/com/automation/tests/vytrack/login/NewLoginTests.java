@@ -114,7 +114,10 @@ public class NewLoginTests extends AbstractTestBase {
                 throw new SkipException("Test was skipped for user: " + username);
             }
         }
-
+ // test.info(String.format("First name: %s, Last name: %s, Username: %s", firstname, lastname, username))
+    //the above line of code is exactly like :
+    // "first name :" + firstName + " last name "  + lastName + " user name " + username ,its just a short-cut
+    // for concatination of String.
         @DataProvider
         public Object[][] credentialsFromExcel() {
             String path = "VytrackTestUsers.xlsx";
