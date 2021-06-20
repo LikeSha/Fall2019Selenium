@@ -12,7 +12,8 @@ import java.util.Map;
 public class ReadDataFromExcel {
 
     @Test
-    public void readExcelFileTest() throws IOException {
+    public void readExcelFileTest() throws IOException { // why throw Exception ? because all files will throw checked
+        // exception! we can handle it by try catch block ,or just simply declare it " throws exception"
         //we need to get a file as an object
         File file = new File("VytrackTestUsers.xlsx");// this File can be any file, its generic
         //object that represents excel file  //Workbook workbook is specific for excel object.Its coming from apache.poi
@@ -122,7 +123,7 @@ April 7,2020
        Workbook --excel file itself
        WorkSheet--excel spreadsheet
        Row-- row in excel spreadsheet
-       Cell--cell witin excel spreadsheet row
+       Cell--cell within excel spreadsheet row
 
        NotOLE2FileException : Invalid header signature; --no excel file found
 
