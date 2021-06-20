@@ -17,7 +17,7 @@ public class ReadDataFromExcel {
         File file = new File("VytrackTestUsers.xlsx");// this File can be any file, its generic
         //object that represents excel file  //Workbook workbook is specific for excel object.Its coming from apache.poi
         Workbook workbook = WorkbookFactory.create(file);
-        //get QA1-short QA1-short is the sheet name which is one the bottom of the excel file page.
+        //get QA1-short QA1-short is the spreadsheet name which is one the bottom of the excel file page.
         Sheet workSheet = workbook.getSheet("QA1-short");
         //get first row
         Row firstRow = workSheet.getRow(0);
