@@ -56,6 +56,7 @@ public class ReadDataFromExcel {
 
         // cell is just like column
 
+        // how to print out entire spreadsheet ? use loop !
         for (int row = 0; row < workSheet.getPhysicalNumberOfRows(); row++) {
             for (int cell = 0; cell < workSheet.getRow(row).getLastCellNum(); cell++) {
                 String cellValue = workSheet.getRow(row).getCell(cell).getStringCellValue();
