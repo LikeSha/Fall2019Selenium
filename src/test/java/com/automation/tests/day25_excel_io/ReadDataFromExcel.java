@@ -42,7 +42,7 @@ public class ReadDataFromExcel {
             System.out.print(firstRow.getCell(i) + " | ");
         }
 
-        // last row is 16the--->index is 15
+        // last row is 16th--->index is 15
         //index of last row
         int numberOfRows = workSheet.getLastRowNum(); // rows start with 0
         //returns how many rows at all
