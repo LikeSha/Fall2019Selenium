@@ -87,3 +87,45 @@ public class ReadDataFromExcel {
 
 
 }
+
+
+/*
+April 7,2020
+
+  Agenda :
+
+      Reading data from excel files.
+      ######################################################
+
+      To open excel files we use Microsoft Office Excel or we can open them in google driver,
+      but you cannot open excel file as a simple text file.
+
+      In Java , there is a library that calls Apache POI that stands for reading /writing operations with excel files.
+
+      It's just a jar file that we need to add. Since we are using maven ,it's gonna be dependency.
+
+      Apache POI doesn't rely on Microsoft Office Excel. It's purely standalone tool.
+
+      Add this to your pom.xml :
+
+      <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+                       <dependency>
+                          <groupId>org.apache.poi</groupId>
+                          <artifactId>poi-ooxml</artifactId>
+                          <version>4.1.2</version>
+                       </dependency>
+
+       There are 2 types of excel files : .xls and .xlsx, last one is newer.
+
+       Workbook --excel file itself
+       WorkSheet--excel spreadsheet
+       Row-- row in excel spreadsheet
+       Cell--cell witin excel spreadsheet row
+
+       NotOLE2FileException : Invalid header signature; --no excel file found
+
+       java.io.IOException: org.apache.poi.xssf.usermodel.SXXFWorkbookFactory not found---
+       check if poi--ooxml-*.jar is on the classpath. --library wasnt downloaded. Refresh maven dependencies.
+
+       mvn dependency: tree--to download all libraries that are specified in pom.xml file
+ */
