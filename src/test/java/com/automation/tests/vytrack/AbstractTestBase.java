@@ -78,7 +78,7 @@ public abstract class AbstractTestBase {
 
     }
 
-    @AfterMethod
+    @AfterMethod // this ITestResult code also see project WebOrdersAutomation2020 version in AbstractTestBase class
     public void tearDown(ITestResult iTestResult) throws IOException {
         //ITestResult class describes the result of a test
         //if test failed ,take a screenshot
