@@ -26,7 +26,7 @@ public class WriteIntoExcelFile {
 //        System.out.println(cell.getStringCellValue());
 
         System.out.println("Before : " + cell.getStringCellValue());
-        cell.setCellValue("PASSED");//I am changing from n/a to passed
+        cell.setCellValue("PASSED");//I am changing from n/a to passeds
         System.out.println("After : " + cell.getStringCellValue());
 
         Row firstRow = sheet.getRow(0);//get first row
