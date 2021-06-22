@@ -73,7 +73,7 @@ public class NewLoginTests extends AbstractTestBase {
         }
 
 
-        @Test(dataProvider = "credentialsFromExcel")
+        @Test(dataProvider = "credentialsFromExcel")// this method without writing data in Excel function, loginTestWithExcel2 has
         public void loginTestWithExcel(String execute, String username, String password, String firstname, String lastname, String result) {
             test = report.createTest("Login test for username :: " + username);
             if (execute.equals("y")) {
@@ -91,7 +91,7 @@ public class NewLoginTests extends AbstractTestBase {
         }
 
 
-        @Test(dataProvider = "credentialsFromExcel")
+        @Test(dataProvider = "credentialsFromExcel")// this method contains how to write data in Excel
         public void loginTestWithExcel2(String execute, String username, String password, String firstname, String lastname, String result) {
 
             String path = "VytrackTestUsers.xlsx";
