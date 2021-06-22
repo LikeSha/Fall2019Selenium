@@ -126,7 +126,8 @@ public class ExcelUtil {
             FileOutputStream fileOut = new FileOutputStream(path);
             workBook.write(fileOut);
 
-            fileOut.close();
+            fileOut.close();// this line super important : if you dont close file after outputstream, your file
+            // will destroyed, and can never open it again.
         } catch (Exception e) {
             e.printStackTrace();
         }
